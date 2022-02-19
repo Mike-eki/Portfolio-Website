@@ -7,6 +7,7 @@ body {
   margin: 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-family: 'Montserrat';
 }
 
 body::-webkit-scrollbar {
@@ -89,7 +90,9 @@ body::-webkit-scrollbar {
 
 .videoTitle {
   margin: 0;
+  font-family: 'Bebas Neue';
   font-size: 64px;
+  letter-spacing: 2.5px;
   color: whitesmoke;
 }
 

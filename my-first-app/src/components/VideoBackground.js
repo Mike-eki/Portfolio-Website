@@ -9,7 +9,7 @@ class VideoBackground extends Component {
 
                 <div className="videoText">
                     <h2 className="videoTitle">Miqueas Moreno</h2>
-                    <p className="videoDescription">Web Devolper | Content Creator | Artist</p>
+                    <p className="videoDescription">Web Developer | Content Creator | Artist</p>
                 </div>
                 
                 <video className="videoItself" muted loop autoPlay>
