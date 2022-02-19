@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1.5s linear;
   }
 }
 
@@ -35,4 +35,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.myNav {
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  background-color: aquamarine;
+  width: 100%;
+  height: 75px;
+}
+
+.homeLink {
+  display: flex;
+  color: #282c34;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.itemsLinks {
+  display: flex;
+  align-items: right;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  color: darkslategrey;
+}
+
+.videoContainer {
+  display: block;
+  justify-content: center;
+}
+
+.videoItself {
+  object-fit: cover;
+  width: 100%;
+  height: 95vh;
 }
