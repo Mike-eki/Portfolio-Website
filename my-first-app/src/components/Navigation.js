@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import React, { Component } from "react";
 
 class Navigation extends Component {
@@ -7,12 +6,18 @@ class Navigation extends Component {
             <nav className="myNav">
 
              <a href="#" className="homeLink">
-             Soy un Nav.
+             HOME
              </a>
 
              <ul className="itemsLinks">
-                <li>
-                 <a className="item"> { this.props.nameItem }  </a>
+                <li className="item">
+                 <a href="#" className="itemRef"> { this.props.nameItem1 }  </a>
+                </li>
+                <li className="item">
+                 <a href="#" className="itemRef"> { this.props.nameItem2 }  </a>
+                </li>
+                <li className="item">
+                 <a href="#" className="itemRef"> { this.props.nameItem3 }  </a>
                 </li>
              </ul>
 

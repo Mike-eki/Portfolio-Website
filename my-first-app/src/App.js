@@ -7,7 +7,7 @@ import Video from './components/Video.js';
 function App() {
   return (
     <div className="App">
-      <Navigation nameItem="Contact me" />
+      <Navigation nameItem1="Projects" nameItem2="Gallery" nameItem3="Contact me" />
       <Video />
     </div>
   );
