@@ -1,5 +1,8 @@
 import SvgEmail from "../svgCode/SvgEmail";
 import SvgMessage from "../svgCode/SvgMessage";
+import SvgMyEmail from "../svgCode/SvgMyEmail";
+import SvgMyLocation from "../svgCode/SvgMyLocation"
+import SvgMyPhone from "../svgCode/SvgMyPhone";
 import SvgUser from "../svgCode/SvgUser";
 
 function Contacts() {
@@ -9,9 +12,18 @@ function Contacts() {
             <video className="contacVideo" muted loop autoPlay>
             <source src="/video/contactBack.mp4" type="video/mp4"/>
             </video>
+
             <div className="sideContact">
                 <div className="personalInfo">
-                    Aqui van algunos datos personales
+                    <div className="personalData">
+                    <SvgMyPhone /> Aqui va mi telefono
+                    </div>
+                    <div className="personalData">
+                    <SvgMyEmail /> Aqui va mi email
+                    </div>
+                    <div className="personalData">
+                    <SvgMyLocation /> Aqui va mi direccion/vivienda
+                    </div>
                 </div>
             </div>
 

@@ -2,7 +2,6 @@
   box-sizing: border-box;
 
 }
-
 body {
   padding: 0;
   margin: 0;
@@ -10,7 +9,6 @@ body {
   scrollbar-width: none;
   font-family: 'Montserrat';
 }
-
 body::-webkit-scrollbar {
   display: none;
 }
@@ -25,7 +23,6 @@ body::-webkit-scrollbar {
   height: 70px;
   z-index: 1;
 }
-
 .homeLink {
   float: left;
   padding-left: 15px;
@@ -33,13 +30,11 @@ body::-webkit-scrollbar {
   font-size: 24px;
   text-decoration: none;
 }
-
 .itemsLinks {
   list-style-type: none;
   display: inline;
   float: right;
 }
-
 .item {
   float: right;
 }
@@ -103,6 +98,7 @@ body::-webkit-scrollbar {
 }
 
 
+/* Contact side */
 .contactContainer {
   display: flex;
   height: 100vh;
@@ -132,6 +128,13 @@ body::-webkit-scrollbar {
 .personalInfo {
   display: flex;
   flex-direction: column;
+  color: black;
+  background-color: aliceblue;
+  width: 90%;
+  text-align: center;
+}
+.personalData{
+  padding: 10px 0 10px 0;
 }
 .myForm {
   display: flex;
