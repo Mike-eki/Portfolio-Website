@@ -19,6 +19,9 @@ class Navigation extends Component {
                 <li className="item">
                  <a href="#" className="itemRef"> { this.props.nameItem3 }  </a>
                 </li>
+                <li className="item">
+                 <a href="#" className="itemRef"> { this.props.nameItem4 }  </a>
+                </li>
              </ul>
 
             </nav>

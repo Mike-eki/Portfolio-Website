@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -67,27 +68,22 @@ body::-webkit-scrollbar {
 
 
 .videoBackContainer {
-  padding: 0;
-  margin: 0;
-  height: 95vh;
+  height: 100vh;
 }
-
 .videoBlend {
   position: absolute;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   background-color: #307264;
   opacity: 60%;
   mix-blend-mode:darken;
 }
-
 .videoText {
   position: absolute;
   text-align: center;
-  top: 36%;
+  top: 41%;
   width: 100%;
 }
-
 .videoTitle {
   margin: 0;
   font-family: 'Bebas Neue';
@@ -95,18 +91,102 @@ body::-webkit-scrollbar {
   letter-spacing: 2.5px;
   color: whitesmoke;
 }
-
 .videoDescription {
   margin: 0;
   font-size: 20 px;
   color: whitesmoke;
 }
-
 .videoItself {
   object-fit: cover;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
 }
+
+
+.contactContainer {
+  display: flex;
+  height: 100vh;
+}
+.contactBlend {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: #865433;
+  mix-blend-mode: hue;
+  z-index: -2;
+}
+.contacVideo {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -3;
+}
+.sideContact {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.personalInfo {
+  display: flex;
+  flex-direction: column;
+}
+.myForm {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 300px;
+}
+.inputGroup {
+  margin-bottom: 30px;
+  position: relative;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1.5px solid #7fffd4;
+  border-radius: 10px;
+  color: #7fffd4;
+  background:transparent;
+  font-size: 12pt; 
+}
+label {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: #7fffd4;
+  cursor: text;
+  transition: 0.5s;
+}
+button {
+  padding: 10px 0;
+  color: #7fffd4;
+  background-color: transparent;
+  outline: 0;
+  border: 1.5px solid #7fffd4;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: 1s;
+}
+button:hover{
+  box-shadow: 0 0 25px aquamarine;
+  color:black;
+  background-color: #7fffd4;
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+  top: -35px;
+  font-size: 10pt;
+}
+
 
 .myFooter { 
   text-align: center;
