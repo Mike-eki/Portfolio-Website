@@ -15,14 +15,21 @@ function Contacts() {
 
             <div className="sideContact">
                 <div className="personalInfo">
-                    <div className="personalData">
-                    <SvgMyPhone /> Aqui va mi telefono
+                <div className="personalData">
+                    <div className="textContact">
+                        <h3>Contact me</h3>
+                        <p>If there is one project that you want me to participate
+                           or a service would you like to know more about it, let me know!</p>
+                    </div>
                     </div>
                     <div className="personalData">
-                    <SvgMyEmail /> Aqui va mi email
+                    <SvgMyPhone /><span>+54 9 3418888999</span>
                     </div>
                     <div className="personalData">
-                    <SvgMyLocation /> Aqui va mi direccion/vivienda
+                    <SvgMyEmail /> miqueas.moreno2016@gmail.com
+                    </div>
+                    <div className="personalData">
+                    <SvgMyLocation /> Argentina, Santa Fe
                     </div>
                 </div>
             </div>

@@ -1,4 +1,3 @@
-import logo from './newLogo.svg';
 import './App.css';
 
 import Navigation from './components/Navigation.js';
