@@ -5,6 +5,8 @@ import VideoBackground from './components/VideoBackground.js';
 import Services from './components/Services';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
+import About from './components/About';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
       nameItem3="Services"
       nameItem4="Projects" />
       <VideoBackground />
+      <Projects/>
       <Services />
+      <About />
       <Contacts />
       <Footer />
     </div>
