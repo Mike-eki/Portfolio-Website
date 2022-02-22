@@ -2,6 +2,7 @@ import './App.css';
 
 import Navigation from './components/Navigation.js';
 import VideoBackground from './components/VideoBackground.js';
+import Services from './components/Services';
 import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 
@@ -14,6 +15,7 @@ function App() {
       nameItem3="Services"
       nameItem4="Projects" />
       <VideoBackground />
+      <Services />
       <Contacts />
       <Footer />
     </div>
