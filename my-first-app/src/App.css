@@ -331,6 +331,7 @@ textarea:valid~label {
 
 
 /* Project side */
+/*-----------------------------------------------------*/
 .projectContainer {
   height: 100vh;
   width: 100%;
@@ -354,8 +355,8 @@ textarea:valid~label {
   position: relative;
   background-image: url("./img/project_img.jpg");
   background-size: cover;
-  padding: 100px 0 0 0;
-  margin: 0 10px 0 10px;
+  padding: 60px 0 0 0;
+  margin: 10px 5px 0 5px;
   width: 240px;
   border-radius: 10px;
   overflow: hidden;
@@ -376,25 +377,7 @@ textarea:valid~label {
     rgba(0,0,0, .3),
     rgba(0,0,0, 1)
   );
-
-  transform: translateY(65%);
-  transition: transform 500ms ease;
 }
-.projectContent:hover .cardProjectText {
-  transform: translateY(0);
-  transition-delay: 500ms;
-}
-
-.cardProjectText > *:not(.cardProjectTitle) {
-  opacity: 0;
-  transition: opacity 500ms linear;
-}
-.projectContent:hover .cardProjectText > *:not(.cardProjectTitle) {
-  opacity: 1;
-  transition-delay: 1000ms;
-}
-
-
 
 .cardProjectTitle{
   position: relative;
@@ -408,36 +391,74 @@ textarea:valid~label {
   bottom: -4px;
   left: calc( var(--padding) * -1 );
   width: calc( 100% + var(--padding) );
-  background-color: green;
+  background-color: aquamarine;
 
-  transform: scaleX(0);
   transform-origin: left;
   transition: transform 500ms ease;
 }
-.projectContent:hover .cardProjectTitle::after {
+.projectContent:hover .cardProjectTitle::after,
+.projectContent:focus-within .cardProjectTitle::after {
   transform: scaleX(1);
 }
 
 .cardProjectBody{
   color: rgba(255,255,255, .9);
 }
+
+/* The 'hover' is detecting the primary pointer divice (mouse/touchpad)*/
+@media(hover) {
+  .cardProjectText{
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+  }
+
+  .projectContent:hover .cardProjectText,
+  .projectContent:focus-within .cardProjectText {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+
+  .projectContent:focus-within .cardProjectText {
+    transition-duration: 0ms;
+  }
+
+  .cardProjectText > *:not(.cardProjectTitle) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+
+  .projectContent:hover .cardProjectText > *:not(.cardProjectTitle),
+  .projectContent:focus-within .cardProjectText > *:not(.cardProjectTitle) {
+    opacity: 1;
+    /*transition-delay: 1000ms;*/ /*You can use this or 'transition'*/
+    transition: 1s;
+  }
+  .cardProjectTitle::after {
+    transform: scaleX(0);
+  }
+}
+
+
 .cardProjectButton {
   text-decoration: none;
   display: inline-block;
-  color: #7fffd4;
-  background-color: #c55214;
+  color: aquamarine;
+  border: 2px solid aquamarine;
   padding: 0.7em 1em;
   border-radius: 10px;
+
 }
 .cardProjectButton:hover,
 .cardProjectButton:focus {
-  background-color: aqua;
+  background-color: aquamarine;
+  color: black;
+  box-shadow: 0 0 15px aquamarine;
 }
-
-
+/*-----------------------------------------------------*/
 
 
 /* Footer side */
+/*-----------------------------------------------------*/
 .myFooter { 
   text-align: center;
   background-color: #c55214;
@@ -446,4 +467,23 @@ textarea:valid~label {
 .contentFooter {
   font-size: small;
   font-weight: bolder;
+}
+
+/*Some configuration for people who don't like animation at all*/
+@media (prefers-reduced-motion: reduce)
+{
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.1ms
+    !important;
+    animation-iteration-count: 1
+    !important;
+    transition-duration: 0.01ms
+    !important;
+    scroll-behavior: auto
+    !important;
+    transition-delay: 0ms
+    !important;
+  }
 }
