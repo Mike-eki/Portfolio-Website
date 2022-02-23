@@ -356,7 +356,7 @@ textarea:valid~label {
   background-image: url("./img/project_img.jpg");
   background-size: cover;
   padding: 60px 0 0 0;
-  margin: 10px 5px 0 5px;
+  margin: 0 5px 10px 5px;
   width: 240px;
   border-radius: 10px;
   overflow: hidden;
