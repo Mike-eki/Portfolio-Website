@@ -1,61 +1,26 @@
+import projectImg from "../img/project_img.jpg";
+
 function Projects () {
     return (
         <section className="projectContainer">
             <div className="projectText">
                 <h2>Projects</h2>
             </div>
-            <div className="projectSliderC">
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
+
+            <div className="projectCards">
+
+                <div className="projectContent">
+                    <div className="cardProjectText">
+                        <h3 className="cardProjectTitle">Titulo</h3>
+                        <p className="cardProjectBody">
+                            Descripcionas lorem i pmsusd lasjdlal fksjkdlo qoeoieoasldj
+                        </p>
+                        <a href="#" className="cardProjectButton">See more</a>
+                    </div>
                 </div>
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
-                </div>
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
-                </div>
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
-                </div>
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
-                </div>
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
-                </div>
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
-                </div>
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
-                </div>
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
-                </div>
-                <div className="projectTemplate">
-                    <p>Imagen</p>
-                    <h4>Titulo</h4>
-                    <p>Descripcion</p>
-                </div>
+
             </div>
+
         </section>
     )
 }

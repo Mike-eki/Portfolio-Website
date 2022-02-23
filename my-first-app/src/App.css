@@ -343,19 +343,97 @@ textarea:valid~label {
   font-size: 54pt;
   margin: 10px 0 0 0;
 }
-.projectSliderC {
-  width: 95%;
-  height: 80vh;
+.projectCards {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
-.projectTemplate{
-  margin: 0 3px 0 3px;
-  width: 200px;
-  height: 200px;
+.projectContent {
+  position: relative;
+  background-image: url("./img/project_img.jpg");
+  background-size: cover;
+  padding: 100px 0 0 0;
+  margin: 0 10px 0 10px;
+  width: 240px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  transition: transform 500ms ease;
 }
+.projectContent:hover,
+.projectContent:focus-within {
+  transform: scale(1.03);
+}
+
+.cardProjectText{
+  --padding: 0.8rem;
+  padding: var(--padding); 
+  color: white;
+  background: linear-gradient(
+    rgba(0,0,0, 0),
+    rgba(0,0,0, .3),
+    rgba(0,0,0, 1)
+  );
+
+  transform: translateY(65%);
+  transition: transform 500ms ease;
+}
+.projectContent:hover .cardProjectText {
+  transform: translateY(0);
+  transition-delay: 500ms;
+}
+
+.cardProjectText > *:not(.cardProjectTitle) {
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+.projectContent:hover .cardProjectText > *:not(.cardProjectTitle) {
+  opacity: 1;
+  transition-delay: 1000ms;
+}
+
+
+
+.cardProjectTitle{
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+}
+.cardProjectTitle::after{
+  content: '';
+  position: absolute;
+  height: 4px;
+  bottom: -4px;
+  left: calc( var(--padding) * -1 );
+  width: calc( 100% + var(--padding) );
+  background-color: green;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+.projectContent:hover .cardProjectTitle::after {
+  transform: scaleX(1);
+}
+
+.cardProjectBody{
+  color: rgba(255,255,255, .9);
+}
+.cardProjectButton {
+  text-decoration: none;
+  display: inline-block;
+  color: #7fffd4;
+  background-color: #c55214;
+  padding: 0.7em 1em;
+  border-radius: 10px;
+}
+.cardProjectButton:hover,
+.cardProjectButton:focus {
+  background-color: aqua;
+}
+
 
 
 
