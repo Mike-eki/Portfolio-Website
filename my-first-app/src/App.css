@@ -334,8 +334,28 @@ textarea:valid~label {
 .projectContainer {
   height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.projectText h2 {
+  font-family: "Bebas Neue";
+  font-size: 54pt;
+  margin: 10px 0 0 0;
+}
+.projectSliderC {
+  width: 95%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.projectTemplate{
+  margin: 0 3px 0 3px;
+  width: 200px;
+  height: 200px;
+}
 
 
 
