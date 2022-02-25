@@ -1,6 +1,7 @@
 import cardImg from '../img/image_card_ej.png'
 import SvgInstagram from '../svgCode/SvgInstagram';
 import SvgYoutube from '../svgCode/SvgYoutube';
+import SvgGithub from '../svgCode/SvgGithub';
 
 function About () {
     return (
@@ -12,6 +13,7 @@ function About () {
                 <div className="profileLinks">
                     <SvgYoutube />
                     <SvgInstagram />
+                    <SvgGithub />
                 </div>
             </aside>
             <div className="mainAbout">

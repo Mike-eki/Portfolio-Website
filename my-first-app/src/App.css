@@ -102,7 +102,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: aquamarine;
 }
@@ -124,7 +124,7 @@ body::-webkit-scrollbar {
 }
 .cardsContainer {
   width: 95%;
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: row;
 }
@@ -163,7 +163,7 @@ body::-webkit-scrollbar {
 /* Contact side */
 .contactContainer {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 .contactBlend {
   position: absolute;
@@ -270,7 +270,7 @@ textarea:valid~label {
 /* About side */
 .aboutContainer {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row-reverse;
 }
@@ -310,7 +310,7 @@ textarea:valid~label {
 }
 .profileLinks {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   height: 45%;
 }
