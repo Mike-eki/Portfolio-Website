@@ -8,12 +8,12 @@ import SvgUser from "../svgCode/SvgUser";
 function Contacts() {
     return (
         <section className="contactContainer">
-            <div className="contactBlend"></div>
+            <div className="contactBlendMode"></div>
             <video className="contacVideo" muted loop autoPlay>
             <source src="/video/contactBack.mp4" type="video/mp4"/>
             </video>
 
-            <div className="sideContact">
+            <div className="contactSubContainer">
                 <div className="personalInfo">
                 <div className="personalData">
                     <div className="textContact">
@@ -34,7 +34,7 @@ function Contacts() {
                 </div>
             </div>
 
-            <div className="sideContact">
+            <div className="contactSubContainer">
                 <form className="myForm">
                     <div className="inputGroup">
                             <input className="myName" type={'text'} required/>

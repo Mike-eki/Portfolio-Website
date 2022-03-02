@@ -2,22 +2,24 @@ import cardImg from '../img/image_card_ej.png'
 import SvgInstagram from '../svgCode/SvgInstagram';
 import SvgYoutube from '../svgCode/SvgYoutube';
 import SvgGithub from '../svgCode/SvgGithub';
+import SvgLinkedin from '../svgCode/SvgLinkedin';
 
 function About () {
     return (
         <section className="aboutContainer">
-            <aside className="asideAbout">
-                <div className="myProfile">
+            <aside className="aboutAside">
+                <div className="aboutProfile">
                     <img src={cardImg}></img>
                 </div>
-                <div className="profileLinks">
+                <div className="aboutAllLinks">
                     <SvgYoutube />
                     <SvgInstagram />
                     <SvgGithub />
+                    <SvgLinkedin />
                 </div>
             </aside>
-            <div className="mainAbout">
-                <div className='textAbout'>
+            <article className="aboutArticle">
+                <div className='aboutText'>
                     <h2>About me</h2>
                     <p>
                     ¿Nunca te ha pasado que había algo que querías hacer, pero no tenias ni idea de "como" hacerlo? ¿O "con" que? ¿O en "donde"?
@@ -39,7 +41,7 @@ function About () {
                     Soy Miqueas Moreno, y nunca parare de aprender.
                     </p>
                 </div>
-            </div>
+            </article>
         </section>
     )
 }
