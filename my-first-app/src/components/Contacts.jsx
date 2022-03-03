@@ -10,7 +10,7 @@ function Contacts() {
         <section className="contactContainer">
             <div className="contactBlendMode"></div>
             <video className="contacVideo" muted loop autoPlay>
-            <source src="/video/contactBack.mp4" type="video/mp4"/>
+            <source src="/video/contactBac.mp4" type="video/mp4"/>
             </video>
 
             <div className="contactSubContainer">

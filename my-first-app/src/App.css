@@ -8,22 +8,27 @@
   --softFont: 'Montserrat';
 }
 * {
+  font-family: var(--softFont);
   box-sizing: border-box;
   scrollbar-width: none;
-  font-family: var(--softFont);
   -ms-overflow-style: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /*
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+  */
+
 }
 body {
-  display: inline-block;
   padding: 0;
   margin: 0;
 }
 body::-webkit-scrollbar {
   display: none;
 }
-
 /*
 
 1. Navbar
@@ -97,41 +102,56 @@ body::-webkit-scrollbar {
 .homeContainer {
   position: relative;
   height: 100vh;
-}
-.homeBlendMode {
-  position: absolute;
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--primaryDarkColor);
-  opacity: 50%;
-  mix-blend-mode:darken;
-}
-.homeText {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+.homeVideoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+.homeVideoContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primaryDarkColor);
+  opacity: 100%;
+  mix-blend-mode: soft-light;
+}
+.homeVideo {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%,-50%);
+}
+.homeText {
+  padding: 0 10px;
 }
 .homeTitle {
   margin: 0;
   font-family: var(--strongFont);
-  font-size: 64px;
-  letter-spacing: 2.5px;
+  font-size: clamp(2.8rem, 20vw, 4.5rem);
+  letter-spacing: .25ch;
   color: var(--neutralB);
 }
 .homeDescription {
   margin: 0;
-  font-size: 1.5em;
+  font-size: clamp(1.2rem, 6vw, 1.8rem);
   font-family: var(--strongFont);
   color: var(--neutralB);
-}
-.homeVideo {
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
 }
 
 
@@ -149,7 +169,7 @@ body::-webkit-scrollbar {
 }
 .projectTitle {
   font-family: var(--strongFont);
-  font-size: 54pt;
+  font-size: clamp(2.8rem, 20vw, 4.5rem);
   margin: 10px 0 0 0;
 }
 .projectSubContainer {
@@ -165,7 +185,7 @@ body::-webkit-scrollbar {
   background-size: cover;
   padding: 60px 0 0 0;
   margin: 0 5px 10px 5px;
-  width: 240px;
+  width: clamp(320px, 50%, 10rem);
   border-radius: 10px;
   overflow: hidden;
   transition: transform 500ms ease;
@@ -251,11 +271,13 @@ body::-webkit-scrollbar {
   box-shadow: 0 0 15px var(--primaryColor);
 }
 /* Responsiveness */
+/*
 @media (max-width: 500px) {
   .projectCard {
     width: 95%;
   }
 }
+*/
 /*-----------------------------------------------------*/
 
 /*
@@ -272,54 +294,59 @@ body::-webkit-scrollbar {
   background-color: var(--primaryColor);
 }
 .servicesTitle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: 20px 0 0px 0;
-  font-size: 56pt;
+  font-size: clamp(2.8rem, 20vw, 4.5rem);
   font-family: var(--strongFont);
   color: black;
 }
 .servicesSubContainer {
-  width: 95%;
-  min-height: 80vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .servicesCard {
-  position: relative;
   background-color: var(--neutralW);
   box-shadow: 0 0 12px 4px var(--primaryDarkColor);
-  margin: 10px;
-  min-height: 77vh;
+  margin: 0 15px 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(340px, 30%, 15rem);
 }
 .servicesCardFrame {
-  position: relative;
-  min-height: 50%;
-  width: 100%;
+  width: 95%;
+  height: 50%;
+  margin: 5px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .servicesCardFrame img{
-  position: absolute;
-  object-fit: cover;
   border-radius: 10px;
-  width: 95%;
-  height: 95%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .servicesCardText {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   text-align: left;
   margin: 0 10px 0 10px;
 }
 .servicesCardText h4 {
+  font-size: clamp(1.1rem, 10vw, 2rem);;
+  text-align: center;
   margin: 10px 0 0 0;
 }
+/* Responsiveness */
+/*
+@media (max-width: 500px) {
+  .servicesSubContainer {
+    flex-wrap: wrap;
+  }
+}
+*/
 
 
 /*
@@ -473,6 +500,7 @@ label {
   padding: 10px;
   color: var(--primaryColor);
   cursor: text;
+  z-index: -1;
   transition: 0.5s;
 }
 button {
