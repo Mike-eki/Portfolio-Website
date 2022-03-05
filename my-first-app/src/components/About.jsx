@@ -7,17 +7,6 @@ import SvgLinkedin from '../svgCode/SvgLinkedin';
 function About () {
     return (
         <section className="aboutContainer">
-            <aside className="aboutAside">
-                <div className="aboutProfile">
-                    <img src={cardImg}></img>
-                </div>
-                <div className="aboutAllLinks">
-                    <SvgYoutube />
-                    <SvgInstagram />
-                    <SvgGithub />
-                    <SvgLinkedin />
-                </div>
-            </aside>
             <article className="aboutArticle">
                 <div className='aboutText'>
                     <h2>About me</h2>
@@ -42,6 +31,28 @@ function About () {
                     </p>
                 </div>
             </article>
+
+            <aside className="aboutAside">
+                <div className="aboutProfile">
+                    <img src={cardImg}></img>
+                </div>
+                <div className="aboutAllLinks">
+                    <div className='aboutRowLinks'>
+                        <a href='#' className='aboutLink'>
+                    <SvgYoutube />
+                        </a>
+                        <a href='#' className='aboutLink'>
+                    <SvgInstagram />
+                        </a>
+                        <a href='#' className='aboutLink'>
+                    <SvgGithub />
+                        </a>
+                        <a href='#' className='aboutLink'>
+                    <SvgLinkedin />
+                        </a>
+                    </div>
+                </div>
+            </aside>
         </section>
     )
 }

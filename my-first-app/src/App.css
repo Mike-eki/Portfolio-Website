@@ -161,7 +161,6 @@ body::-webkit-scrollbar {
   =================
 */
 .projectContainer {
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -208,6 +207,7 @@ body::-webkit-scrollbar {
   position: relative;
   width: max-content;
   max-width: 100%;
+  margin: 0 0 auto;
 }
 .projectCardTitle::after{
   content: '';
@@ -289,12 +289,11 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
   width: 100%;
   background-color: var(--primaryColor);
 }
 .servicesTitle {
-  margin: 20px 0 0px 0;
+  margin: 10px 0 0px 0;
   font-size: clamp(2.8rem, 20vw, 4.5rem);
   font-family: var(--strongFont);
   color: black;
@@ -339,6 +338,9 @@ body::-webkit-scrollbar {
   text-align: center;
   margin: 10px 0 0 0;
 }
+.servicesCardText p {
+  font-size: 1.1rem;
+}
 /* Responsiveness */
 /*
 @media (max-width: 500px) {
@@ -355,65 +357,90 @@ body::-webkit-scrollbar {
   ==============
 */
 .aboutContainer {
-  width: 100%;
-  min-height: 100vh;
   display: flex;
-  flex-direction: row-reverse;
 }
 .aboutAside{
   display: flex;
   flex-direction: column;
-  position: relative;
+  align-items: center;
   width: 30%;
-  min-height: 100vh;
   background-color: var(--primaryDarkColor);
 }
 .aboutArticle {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70%;
-  min-height: 100vh;
   background-color: var(--neutralW);
 }
 .aboutProfile{
-  position: relative;
   display: flex;
-  width: 100%;
-  height: 55%;
+  position: relative;
+  width: 85%;
+  margin: 1.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.aboutProfile::after {
+  content: '';
+  padding-bottom: 100%;
+  display: block;
 }
 .aboutProfile img{
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
   width: 100%;
-  height: 100%;
   object-fit:cover;
-  border-radius: 50%;
 }
 .aboutAllLinks {
+  display: block;
+  width: 80%;
+  margin: 0 0 10px;
+}
+.aboutRowLinks {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
-  height: 45%;
+  align-items: flex-start;
+}
+.aboutLink {
+  position: relative;
+  transition: 0.5s;
+}
+.aboutLink:hover {
+  transform: scale(1.2);
 }
 .aboutText{
-  width: 90%;
-  min-height: 90%;
+  inline-size: 75ch;
+  padding: 0 20px;
 }
 .aboutText h2 {
-  margin: 0;
-  font-size: 56pt;
+  margin: 10px 0 0 0;
+  font-size: clamp(2.8rem, 20vw, 4.5rem);
   font-family: var(--strongFont);
 }
 .aboutText p {
   margin: 0 0 10px;
-  font-size: 14pt;
+  font-size: 1.1rem;
 }
 
+@media (max-width: 900px) {
+  .aboutContainer {
+    flex-direction: column-reverse;
+  }
+  .aboutAside {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutProfile {
+    width: 65%;
+  }
+  .aboutArticle {
+    width: 100%;
+  }
+  .aboutArticle h2 {
+    text-align: center;
+  }
+}
 
 
 /*
@@ -422,17 +449,21 @@ body::-webkit-scrollbar {
   ============
 */
 .contactContainer {
+  position: relative;
   display: flex;
-  min-height: 100vh;
 }
-.contactBlendMode {
+.contactImgContainer {
   position: absolute;
-  height: 100vh;
   width: 100%;
-  background-color: #865433;
-  mix-blend-mode: hue;
+  height: 100%;
+  background-image: url('/src/img/project_img.jpg');
+  background-size: cover;
+  background-color: #22204e;
+  background-blend-mode: soft-light;
+  opacity: 80%;
   z-index: -2;
 }
+/*
 .contacVideo {
   position: absolute;
   object-fit: cover;
@@ -440,10 +471,10 @@ body::-webkit-scrollbar {
   height: 100vh;
   z-index: -3;
 }
+*/
 .contactSubContainer {
   display: flex;
   width: 100%;
-  height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -453,30 +484,36 @@ body::-webkit-scrollbar {
   padding: 20px 15px 20px 15px;
   color: black;
   background-color: var(--primaryColor);
-  mix-blend-mode: lighten;
   border-radius: 10px;
   width: 80%;
   text-align: center;
 }
-.textContact h3{
+.contactText {
+  display: flex;
+  flex-direction: column;
+}
+.contactText h3{
   margin: 0;
   font-family: var(--strongFont);
-  font-size: 36pt;
+  font-size: clamp(2.8rem, 20vw, 4.5rem);
 }
-.textContact p {
+.contactText p {
   margin: 8px 0 0 0;
 }
-.personalData{
+.personalData {
   padding: 10px 0 10px 0;
   display: flex;
   align-items: center;
   white-space: break-spaces;
 }
+.emailData {
+  word-break: break-all;
+}
 .myForm {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  max-width: 300px;
+  width: 80%;
+  padding: 50px 0;
 }
 .inputGroup {
   margin-bottom: 30px;
@@ -525,6 +562,32 @@ textarea:focus~label,
 textarea:valid~label {
   top: -35px;
   font-size: 10pt;
+}
+@media (max-width: 900px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+  .personalInfo {
+    width: 100%;
+    border-radius: 0;
+  }
+  .personalData {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contactText {
+    align-items: center;
+  }
+  .contactText p {
+    width: 70%;
+  }
+  .contactContent {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 
