@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Home extends Component {
     render() {
         return (
-            <section className="homeContainer">
+            <section id="1" className="homeContainer">
 
                 <div className="homeVideoContainer">
                     <video className="homeVideo" muted loop autoPlay>

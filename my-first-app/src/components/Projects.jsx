@@ -2,7 +2,7 @@ import projectImg from "../img/project_img.jpg";
 
 function Projects () {
     return (
-        <section className="projectContainer">
+        <section id="2" className="projectContainer">
             <div>
                 <h2 className="projectTitle">Projects</h2>
             </div>

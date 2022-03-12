@@ -6,7 +6,7 @@ import SvgLinkedin from '../svgCode/SvgLinkedin';
 
 function About () {
     return (
-        <section className="aboutContainer">
+        <section id='4' className="aboutContainer">
             <article className="aboutArticle">
                 <div className='aboutText'>
                     <h2>About me</h2>

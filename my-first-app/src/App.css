@@ -11,6 +11,7 @@
   font-family: var(--softFont);
   box-sizing: border-box;
   scrollbar-width: none;
+  scroll-behavior: smooth;
   -ms-overflow-style: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,6 +30,7 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
 /*
 
 1. Navbar
@@ -47,52 +49,178 @@ body::-webkit-scrollbar {
   NAVBAR
   ===========================
 */
-.mainNav {
-  display: flex;
-  position: absolute;
-  justify-content: space-between;
-  align-items: center;
-  top: 0;
-  width: 100%;
-  height: 70px;
-  z-index: 1;
-}
-.logo {
-  float: left;
-  padding-left: 15px;
-  font-size: 24px;
-  text-decoration: none;
-}
-.allLinks {
-  list-style-type: none;
-  display: inline;
-  float: right;
-}
-.item {
-  float: right;
-}
-/* Links buttons of Nav with hover effect */
-/*=========================================*/
-.link {
-  position: relative;
-  padding: 15px 15px;
-  margin: 10px 15px;
-  text-decoration: none;
-  border: 1px solid var(--primaryColor);
-  font-size: 16px;
-  border-radius: 30px;
-  color: var(--primaryColor);
-  letter-spacing: 2px;
-  overflow: hidden;
-  transition: 1s;
-}
-.link:hover {
-  color: var(--neutralB);
-  background-color: var(--primaryColor);
-  box-shadow: 0 0 25px var(--primaryColor);
-}
-/*=======================================*/
 
+/*For large width screens*/
+@media (min-width: 765px) {
+  .navMobile {
+    display: none;
+  }
+  .mainNav {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 10;
+    background: rgb(0,255,255);
+    background: linear-gradient(90deg, rgba(0,255,255,1) 0%, rgba(255,0,0,1) 100%);
+  }
+  .logo {
+    padding: 0 15px;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  .allLinks {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+  }
+  .item {
+    padding: 0;
+    margin: 0;
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25em;
+    padding: .6em;
+    margin: 0 .5em;
+    text-decoration: none;
+    border: 1px solid var(--primaryColor);
+    font-size: 16px;
+    border-radius: 30px;
+    color: var(--primaryColor);
+    overflow: hidden;
+    transition: .5s;
+  }
+  .linkIcon {
+    fill: var(--primaryColor);
+    transition: .5s;
+  }
+  .link:hover {
+    color: var(--neutralB);
+    background-color: var(--primaryColor);
+    box-shadow: 0 0 25px var(--primaryColor);
+  }
+  .link:hover > .linkIcon {
+    fill: var(--neutralB);
+  }
+}
+/*For mobile width screens*/
+@media (max-width: 765px) {
+  .mainNav {
+    display: none;
+  }
+  .navMobile {
+    position: fixed;
+    transform: translate(80vw,75vh);
+    z-index: 1000;
+  }
+  .allLinksMob {
+    margin: 0; padding: 0;
+    width: 50px;
+    height: 50px;
+    list-style: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+  }
+  .menuContainer {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    background-color: #c55214;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    z-index: 100;
+  }
+  .menuIcon {
+    display: block;
+    width: 32px; height: 3px;
+    background: #FFFFFF;
+  }
+  .menuIcon::before,
+  .menuIcon::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 32px; height: 3px;
+    background-color: #FFFFFF;
+    transition: .5s ease;
+  }
+  .menuIcon::before {
+    top: .9em;
+  }
+  .menuIcon::after {
+    bottom: .9em;
+  }
+  .itemMob {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: .5s ease;
+  }
+  .linkMob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    transition: .5s ease;
+  }
+  /*
+  .menuContainer:hover ~ .itemMob{
+    transform: translateX(-50px) scale(1);
+  }
+  */
+  .menuContainer.active:hover > .menuIcon:first-of-type{
+    height: 0;
+  }
+  .menuContainer.active:hover > .menuIcon::before,
+  .menuContainer.active:hover > .menuIcon::after {
+    transition: .5s ease;
+    top: 50%; bottom: 50%;
+    transform-origin: 50% 50%;
+  }
+  .menuContainer.active:hover > .menuIcon::before{
+    transform: rotate(45deg);
+  }
+  .menuContainer.active:hover > .menuIcon::after{
+    transform: rotate(-45deg);
+  }
+  .menuContainer.active:hover+.itemMob {
+    transform: scale(1) translateY(-600%);
+  }
+  .menuContainer.active:hover+.itemMob+.itemMob {
+    transform: scale(1) translateY(-480%);
+  }
+  .menuContainer.active:hover+.itemMob+.itemMob+.itemMob {
+    transform: scale(1) translateY(-360%);
+  }
+  .menuContainer.active:hover+.itemMob+.itemMob+.itemMob+.itemMob {
+    transform: scale(1) translateY(-240%) ;
+  }
+  .menuContainer.active:hover+.itemMob+.itemMob+.itemMob+.itemMob+.itemMob {
+    transform: scale(1) translateY(-120%) ;
+  }
+}
 
 /*
   ================
@@ -289,7 +417,6 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   background-color: var(--primaryColor);
 }
 .servicesTitle {
@@ -302,6 +429,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 .servicesCard {
   background-color: var(--neutralW);
@@ -315,7 +443,7 @@ body::-webkit-scrollbar {
 }
 .servicesCardFrame {
   width: 95%;
-  height: 50%;
+  height: 250px;
   margin: 5px 0 0 0;
   display: flex;
   align-items: center;
@@ -405,8 +533,16 @@ body::-webkit-scrollbar {
   position: relative;
   transition: 0.5s;
 }
+.aboutIcon{
+  fill: var(--neutralB);
+  transition: 0.5s;
+}
 .aboutLink:hover {
   transform: scale(1.2);
+}
+.aboutLink:hover > .aboutIcon {
+  transition: 0.5s;
+  fill: var(--primaryLightColor);
 }
 .aboutText{
   inline-size: 75ch;
@@ -487,6 +623,7 @@ body::-webkit-scrollbar {
   border-radius: 10px;
   width: 80%;
   text-align: center;
+  gap: 1rem;
 }
 .contactText {
   display: flex;
@@ -500,14 +637,22 @@ body::-webkit-scrollbar {
 .contactText p {
   margin: 8px 0 0 0;
 }
+.contactContent {
+  display: flex;
+}
+.personalIcons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: .5rem;
+  justify-items: center;
+}
 .personalData {
   padding: 10px 0 10px 0;
   display: flex;
   align-items: center;
+  justify-content: center;
   white-space: break-spaces;
-}
-.emailData {
-  word-break: break-all;
 }
 .myForm {
   display: flex;
@@ -519,7 +664,9 @@ body::-webkit-scrollbar {
   margin-bottom: 30px;
   position: relative;
 }
-input, textarea {
+.myName,
+.myEmail,
+.myMessage {
   width: 100%;
   padding: 10px;
   outline: 0;
@@ -529,7 +676,7 @@ input, textarea {
   background:transparent;
   font-size: 12pt; 
 }
-label {
+.contactLabel {
   height: 100%;
   position: absolute;
   left: 0;
@@ -540,7 +687,7 @@ label {
   z-index: -1;
   transition: 0.5s;
 }
-button {
+.contactButton {
   padding: 10px 0;
   color: var(--primaryColor);
   background-color: transparent;
@@ -551,7 +698,7 @@ button {
   cursor: pointer;
   transition: 1s;
 }
-button:hover{
+.contactButton:hover{
   box-shadow: 0 0 25px var(--primaryColor);
   color:black;
   background-color: var(--primaryColor);
@@ -580,13 +727,6 @@ textarea:valid~label {
   }
   .contactText p {
     width: 70%;
-  }
-  .contactContent {
-    display: flex;
-    flex: 1;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
   }
 }
 

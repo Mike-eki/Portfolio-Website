@@ -7,7 +7,7 @@ import SvgUser from "../svgCode/SvgUser";
 
 function Contacts() {
   return (
-    <section className="contactContainer">
+    <section id="5" className="contactContainer">
 
       <div className="contactImgContainer">
       </div>
@@ -22,17 +22,15 @@ function Contacts() {
               </p>
           </div>
           <div className="contactContent">
-            <div className="personalData">
+            <div className="personalIcons">
                 <SvgMyPhone />
-                <span>+54 9 3418888999</span>
-            </div>
-            <div className="personalData">
                 <SvgMyEmail />
-                <span className="emailData"> miqueas.moreno2016@gmail.com</span> 
+                <SvgMyLocation /> 
+                <span>+54 9 3418888999</span>
+                <span className="emailData">mi&#8203;que&#8203;as&#8203;.mo&#8203;re&#8203;no&#8203;2016@&#8203;gmail&#8203;.com</span>
+                <span> Argentina, Santa Fe</span>
             </div>
             <div className="personalData">
-                <SvgMyLocation /> 
-                <span> Argentina, Santa Fe</span>
             </div>
           </div>
         </div>
@@ -42,14 +40,14 @@ function Contacts() {
         <form className="myForm">
           <div className="inputGroup">
             <input className="myName" type={"text"} required />
-            <label for="myName">
+            <label className="contactLabel" htmlFor="myName">
               <SvgUser />
               Name
             </label>
           </div>
           <div className="inputGroup">
             <input className="myEmail" type={"email"} required />
-            <label for="myEmail">
+            <label className="contactLabel" htmlFor="myEmail">
               <SvgEmail />
               Email
             </label>
@@ -61,11 +59,11 @@ function Contacts() {
               rows={10}
               required
             ></textarea>
-            <label for="myMessage">
+            <label className="contactLabel" htmlFor="myMessage">
               <SvgMessage /> Message
             </label>
           </div>
-          <button type={"submit"}>Send</button>
+          <button type={"submit"} className="contactButton">Send</button>
         </form>
       </div>
     </section>
