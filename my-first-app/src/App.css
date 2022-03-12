@@ -150,6 +150,11 @@ body::-webkit-scrollbar {
     width: 32px; height: 3px;
     background: #FFFFFF;
   }
+  .menuIcon .active {
+    display: block;
+    width: inherit; height: inherit;
+    background: transparent;
+  }
   .menuIcon::before,
   .menuIcon::after {
     content: '';
@@ -191,7 +196,7 @@ body::-webkit-scrollbar {
   }
   */
   .menuContainer.active:hover > .menuIcon:first-of-type{
-    height: 0;
+    background-color: transparent;
   }
   .menuContainer.active:hover > .menuIcon::before,
   .menuContainer.active:hover > .menuIcon::after {

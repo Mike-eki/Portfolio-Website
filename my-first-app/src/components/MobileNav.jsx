@@ -6,6 +6,28 @@ import SvgServices from "../svgCode/NavIcons/SvgServices";
 import SvgAbout from "../svgCode/NavIcons/SvgAbout";
 import SvgContact from "../svgCode/NavIcons/SvgContact";
 
+const menuContainer = document.getElementsByClassName('menuContainer');
+const menuIcon = document.getElementsByClassName('menuIcon');
+
+// anEvent.target.closest('.menuContainer')
+
+document.addEventListener('click', function(anEvent) {
+  if ( anEvent.target.className === 'menuContainer' 
+      || anEvent.target.className === 'menuIcon' ){
+    menuContainer[0].classList.add('active');
+    menuIcon[0].classList.add('active');
+  }
+  
+  else if ( anEvent.target.className === 'menuContainer active' 
+          || anEvent.target.className === 'menuIcon active' ) {
+    menuContainer[0].classList.remove('active');
+    menuIcon[0].classList.remove('active');
+  }
+  else {
+    menuContainer[0].classList.remove('active');
+    menuIcon[0].classList.remove('active');
+  }
+})
 function MobileNav () {
   
   // =================================
@@ -42,16 +64,6 @@ function MobileNav () {
 
   // Esto de aqui funciona barbaro, pero solo falta que se cierre con un click en la cruz
 
-  const menuContainer = document.getElementsByClassName('menuContainer');
-
-  document.addEventListener('click', function(anEvent) {
-    if ( anEvent.target.closest('.menuContainer') ){
-      menuContainer[0].classList.add('active');
-    }
-    else {
-      menuContainer[0].classList.remove('active');
-    }
-  })
   
   
 
