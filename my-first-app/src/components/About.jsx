@@ -11,23 +11,19 @@ function About () {
                 <div className='aboutText'>
                     <h2>About me</h2>
                     <p>
-                    ¿Nunca te ha pasado que había algo que querías hacer, pero no tenias ni idea de "como" hacerlo? ¿O "con" que? ¿O en "donde"?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, ullam.
                     </p>
                     <p>
-                    Hola, me llamo Miqueas, me encuentro buscando mi primera experiencia laboral en tecnología.
-                    En tiempos de pandemia, curso la carrera de Ingeniera en Sistemas y no solo eso, cada día me capacito de forma autodidacta a través de cursos online y de internet.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, assumenda facilis, saepe ad et sint fuga, accusamus perferendis expedita sit doloribus. Earum suscipit non rerum quos aliquam facere, doloremque autem cupiditate eius? Iure corporis, harum ad esse molestias est ipsum recusandae doloribus obcaecati blanditiis eveniet aperiam rem placeat voluptates voluptatem.
                     </p>
                     <p>
-                    Tuve la oportunidad de acceder al curso de Soporte Técnico hecho por Junior Achievement Argentina y Google, en donde aprendí todas las bases y aspectos básicos de la tecnología, redes, infraestructura y seguridad informática.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, quod provident. Velit minima, distinctio inventore, consequatur est asperiores amet odio fugiat atque quasi odit animi perferendis. Nemo repudiandae assumenda temporibus corporis, cupiditate sapiente perferendis dignissimos provident, omnis consequatur laboriosam optio.
                     </p>
                     <p>
-                    Además, me gusta mucho pasar de la teoría a la practica, por lo que todo el conocimiento que voy adquiriendo lo aplico haciendo proyectos personales.
-                    Gracias a la capacidades que tengo, puedo hacerle frente a cualquier dificultad que se me presente.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci placeat odio aut a itaque eius culpa incidunt iste doloribus illo.
                     </p>
                     <p>
-                    Yo quiero ser de esas personas que no desisten ante una problemática. Que no cesan de pensar en una solución y que mueven cielo y tierra para que algo se resuelva.
-                    Es por eso que, seguiré trabajando. Sé que cada paso que de, estaré mas aun mas cerca de esa primera experiencia laboral en IT.
-                    Soy Miqueas Moreno, y nunca parare de aprender.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ut delectus quibusdam asperiores saepe voluptatibus. Adipisci optio corrupti cum laudantium quae, laboriosam tenetur suscipit repellat ab ipsum rem? Voluptatem, est.
                     </p>
                 </div>
             </article>

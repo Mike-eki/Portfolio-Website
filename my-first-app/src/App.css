@@ -1,9 +1,9 @@
 :root {
   --primaryColor: #00fbd8;
-  --primaryLightColor: #6dffff;
-  --primaryDarkColor: #00c7a7;
-  --neutralB: #000000;
-  --neutralW: #FFFFFF;
+  --primaryLightColor: #8bf8f8;
+  --primaryDarkColor: #04a187;
+  --neutralB: #00241F;
+  --neutralW: #E6FFFC;
   --strongFont: 'Bebas Neue';
   --softFont: 'Montserrat';
 }
@@ -64,8 +64,8 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 10vh;
     z-index: 10;
-    background: rgb(0,255,255);
-    background: linear-gradient(90deg, rgba(0,255,255,1) 0%, rgba(255,0,0,1) 100%);
+    background: var(--neutralB);
+    box-shadow: 0 0 20px var(--neutralB);
   }
   .logo {
     padding: 0 15px;
@@ -135,20 +135,20 @@ body::-webkit-scrollbar {
     opacity: 1;
     width: 50px;
     height: 50px;
-    background-color: #c55214;
+    background-color: var(--primaryLightColor);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: inherit;
     height: inherit;
-    overflow: hidden;
     z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
   .menuIcon {
     display: block;
-    width: 32px; height: 3px;
-    background: #FFFFFF;
+    width: 28px; height: 3px;
+    background: var(--neutralB);
   }
   .menuIcon .active {
     display: block;
@@ -160,22 +160,23 @@ body::-webkit-scrollbar {
     content: '';
     position: absolute;
     display: block;
-    width: 32px; height: 3px;
-    background-color: #FFFFFF;
-    transition: .5s ease;
+    width: 28px; height: 3px;
+    background-color: var(--neutralB);
+    transition: .3s ease;
   }
   .menuIcon::before {
-    top: .9em;
+    top: 1em;
   }
   .menuIcon::after {
-    bottom: .9em;
+    bottom: 1em;
   }
   .itemMob {
     position: absolute;
     width: inherit;
     height: inherit;
-    background-color: var(--primaryColor);
+    background-color: var(--primaryLightColor);
     border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,17 +191,15 @@ body::-webkit-scrollbar {
     height: inherit;
     transition: .5s ease;
   }
-  /*
-  .menuContainer:hover ~ .itemMob{
-    transform: translateX(-50px) scale(1);
+  .menuContainer.active:hover {
+    background-color: var(--neutralW);
   }
-  */
   .menuContainer.active:hover > .menuIcon:first-of-type{
     background-color: transparent;
   }
   .menuContainer.active:hover > .menuIcon::before,
   .menuContainer.active:hover > .menuIcon::after {
-    transition: .5s ease;
+    transition: .3s ease;
     top: 50%; bottom: 50%;
     transform-origin: 50% 50%;
   }
@@ -277,14 +276,22 @@ body::-webkit-scrollbar {
   margin: 0;
   font-family: var(--strongFont);
   font-size: clamp(2.8rem, 20vw, 4.5rem);
-  letter-spacing: .25ch;
-  color: var(--neutralB);
+  letter-spacing: .075em;
+  color: var(--neutralW);
+  text-shadow: 2.5px 2.5px 8px var(--neutralB),
+              -2.5px -2.5px 8px var(--neutralB),
+              -2.5px 2.5px 8px var(--neutralB), 
+              2.5px -2.5px 8px var(--neutralB);
 }
 .homeDescription {
   margin: 0;
   font-size: clamp(1.2rem, 6vw, 1.8rem);
   font-family: var(--strongFont);
-  color: var(--neutralB);
+  color: var(--neutralW);
+  text-shadow: 2.5px 2.5px 8px var(--neutralB),
+              -2.5px -2.5px 8px var(--neutralB),
+              -2.5px 2.5px 8px var(--neutralB), 
+              2.5px -2.5px 8px var(--neutralB);
 }
 
 
@@ -298,10 +305,12 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--neutralW);;
 }
 .projectTitle {
   font-family: var(--strongFont);
   font-size: clamp(2.8rem, 20vw, 4.5rem);
+  color: var(--neutralB);
   margin: 10px 0 0 0;
 }
 .projectSubContainer {
@@ -341,6 +350,7 @@ body::-webkit-scrollbar {
   width: max-content;
   max-width: 100%;
   margin: 0 0 auto;
+  color: var(--neutralW);
 }
 .projectCardTitle::after{
   content: '';
@@ -359,7 +369,7 @@ body::-webkit-scrollbar {
   transform: scaleX(1);
 }
 .projectCardBody{
-  color: rgba(255,255,255, .9);
+  color: var(--neutralW);
 }
 /* The 'hover' is detecting the primary pointer divice (mouse/touchpad)*/
 @media(hover) {
@@ -428,7 +438,7 @@ body::-webkit-scrollbar {
   margin: 10px 0 0px 0;
   font-size: clamp(2.8rem, 20vw, 4.5rem);
   font-family: var(--strongFont);
-  color: black;
+  color: var(--neutralB);
 }
 .servicesSubContainer {
   display: flex;
@@ -438,13 +448,13 @@ body::-webkit-scrollbar {
 }
 .servicesCard {
   background-color: var(--neutralW);
-  box-shadow: 0 0 12px 4px var(--primaryDarkColor);
   margin: 0 15px 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: clamp(340px, 30%, 15rem);
+  box-shadow: 0 0 12px 5px var(--primaryLightColor);
 }
 .servicesCardFrame {
   width: 95%;
@@ -465,6 +475,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   text-align: left;
   margin: 0 10px 0 10px;
+  color: var(--neutralB);
 }
 .servicesCardText h4 {
   font-size: clamp(1.1rem, 10vw, 2rem);;
@@ -473,6 +484,14 @@ body::-webkit-scrollbar {
 }
 .servicesCardText p {
   font-size: 1.1rem;
+}
+.servicesCardIcons {
+  width: inherit;
+  padding: .5em 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
 }
 /* Responsiveness */
 /*
@@ -497,7 +516,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   width: 30%;
-  background-color: var(--primaryDarkColor);
+  background-color: var(--primaryColor);
 }
 .aboutArticle {
   display: flex;
@@ -505,6 +524,7 @@ body::-webkit-scrollbar {
   align-items: center;
   width: 70%;
   background-color: var(--neutralW);
+  color: var(--neutralB);
 }
 .aboutProfile{
   display: flex;
@@ -538,20 +558,21 @@ body::-webkit-scrollbar {
   position: relative;
   transition: 0.5s;
 }
-.aboutIcon{
+.aboutSvgIcon{
   fill: var(--neutralB);
   transition: 0.5s;
 }
 .aboutLink:hover {
   transform: scale(1.2);
 }
-.aboutLink:hover > .aboutIcon {
+.aboutLink:hover > .aboutSvgIcon {
   transition: 0.5s;
-  fill: var(--primaryLightColor);
+  fill: var(--primaryDarkColor);
 }
 .aboutText{
   inline-size: 75ch;
   padding: 0 20px;
+  background-color: var(--neutralW);
 }
 .aboutText h2 {
   margin: 10px 0 0 0;
@@ -604,15 +625,6 @@ body::-webkit-scrollbar {
   opacity: 80%;
   z-index: -2;
 }
-/*
-.contacVideo {
-  position: absolute;
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
-  z-index: -3;
-}
-*/
 .contactSubContainer {
   display: flex;
   width: 100%;
@@ -623,7 +635,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   padding: 20px 15px 20px 15px;
-  color: black;
+  color: var(--neutralB);
   background-color: var(--primaryColor);
   border-radius: 10px;
   width: 80%;
@@ -638,12 +650,20 @@ body::-webkit-scrollbar {
   margin: 0;
   font-family: var(--strongFont);
   font-size: clamp(2.8rem, 20vw, 4.5rem);
+  color: var(--neutralB);
 }
 .contactText p {
+  color: var(--neutralB);
   margin: 8px 0 0 0;
 }
 .contactContent {
   display: flex;
+}
+.contactSvgIcon {
+  fill: var(--primaryLightColor);
+}
+.infoSvgIcon {
+  fill: var(--neutralB);
 }
 .personalIcons {
   display: grid;
@@ -651,6 +671,7 @@ body::-webkit-scrollbar {
   width: 100%;
   gap: .5rem;
   justify-items: center;
+  align-items: center;
 }
 .personalData {
   padding: 10px 0 10px 0;
@@ -680,6 +701,7 @@ body::-webkit-scrollbar {
   color: var(--primaryLightColor);
   background:transparent;
   font-size: 12pt; 
+  resize: none;
 }
 .contactLabel {
   height: 100%;
@@ -687,7 +709,7 @@ body::-webkit-scrollbar {
   left: 0;
   top: 0;
   padding: 10px;
-  color: var(--primaryColor);
+  color: var(--primaryLightColor);
   cursor: text;
   z-index: -1;
   transition: 0.5s;
@@ -705,7 +727,7 @@ body::-webkit-scrollbar {
 }
 .contactButton:hover{
   box-shadow: 0 0 25px var(--primaryColor);
-  color:black;
+  color:var(--neutralB);
   background-color: var(--primaryColor);
 }
 input:focus~label,
@@ -727,11 +749,20 @@ textarea:valid~label {
     flex-direction: column;
     gap: 10px;
   }
+  .personalIcons {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .phoneData {
+    grid-row: 2 / 3;
+  }
+  .emailData {
+    grid-row: 4 / 5;
+  }
   .contactText {
     align-items: center;
   }
   .contactText p {
-    width: 70%;
+    width: 95%;
   }
 }
 

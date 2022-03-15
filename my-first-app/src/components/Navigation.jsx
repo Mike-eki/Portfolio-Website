@@ -12,7 +12,7 @@ class Navigation extends Component {
           <nav className="mainNav">
             
             <a href="#" className="logo">
-              HOME
+              LOGO
             </a>
 
             <ul className="allLinks">

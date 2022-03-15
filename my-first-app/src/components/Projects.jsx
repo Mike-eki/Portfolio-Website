@@ -1,5 +1,7 @@
 import projectImg from "../img/project_img.jpg";
 
+const bodyLorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis! Minus, ducimus!'
+
 function Projects () {
     return (
         <section id="2" className="projectContainer">
@@ -11,9 +13,9 @@ function Projects () {
 
                 <div className="projectCard">
                     <div className="projectCardText">
-                        <h3 className="projectCardTitle">Titulo</h3>
+                        <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
-                            Descripcionas lorem i pmsusd lasjdlal fksjkdlo qoeoieoasldj
+                            {bodyLorem}
                         </p>
                         <a href="#" className="projectCardButton">See more</a>
                     </div>
@@ -22,20 +24,9 @@ function Projects () {
 
                 <div className="projectCard">
                     <div className="projectCardText">
-                        <h3 className="projectCardTitle">Titulo</h3>
+                        <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
-                            Descripcionas lorem i pmsusd lasjdlal fksjkdlo qoeoieoasldj
-                        </p>
-                        <a href="#" className="projectCardButton">See more</a>
-                    </div>
-                </div>
-        
-
-                <div className="projectCard">
-                    <div className="projectCardText">
-                        <h3 className="projectCardTitle">Titulo</h3>
-                        <p className="projectCardBody">
-                            Descripcionas lorem i pmsusd lasjdlal fksjkdlo qoeoieoasldj
+                            {bodyLorem}
                         </p>
                         <a href="#" className="projectCardButton">See more</a>
                     </div>
@@ -44,9 +35,9 @@ function Projects () {
 
                 <div className="projectCard">
                     <div className="projectCardText">
-                        <h3 className="projectCardTitle">Titulo</h3>
+                        <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
-                            Descripcionas lorem i pmsusd lasjdlal fksjkdlo qoeoieoasldj
+                            {bodyLorem}
                         </p>
                         <a href="#" className="projectCardButton">See more</a>
                     </div>
@@ -55,9 +46,9 @@ function Projects () {
 
                 <div className="projectCard">
                     <div className="projectCardText">
-                        <h3 className="projectCardTitle">Titulo</h3>
+                        <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
-                            Descripcionas lorem i pmsusd lasjdlal fksjkdlo qoeoieoasldj
+                            {bodyLorem}
                         </p>
                         <a href="#" className="projectCardButton">See more</a>
                     </div>
@@ -66,9 +57,20 @@ function Projects () {
 
                 <div className="projectCard">
                     <div className="projectCardText">
-                        <h3 className="projectCardTitle">Titulo</h3>
+                        <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
-                            Descripcionas lorem i pmsusd lasjdlal fksjkdlo qoeoieoasldj
+                            {bodyLorem}
+                        </p>
+                        <a href="#" className="projectCardButton">See more</a>
+                    </div>
+                </div>
+        
+
+                <div className="projectCard">
+                    <div className="projectCardText">
+                        <h3 className="projectCardTitle">Titulo de carta</h3>
+                        <p className="projectCardBody">
+                            {bodyLorem}
                         </p>
                         <a href="#" className="projectCardButton">See more</a>
                     </div>
@@ -76,9 +78,9 @@ function Projects () {
 
                 <div className="projectCard">
                     <div className="projectCardText">
-                        <h3 className="projectCardTitle">Titulo</h3>
+                        <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
-                            Descripcionas lorem i pmsusd lasjdlal fksjkdlo qoeoieoasldj
+                            {bodyLorem}
                         </p>
                         <a href="#" className="projectCardButton">See more</a>
                     </div>
@@ -86,9 +88,9 @@ function Projects () {
 
                 <div className="projectCard">
                     <div className="projectCardText">
-                        <h3 className="projectCardTitle">Titulo</h3>
+                        <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
-                            Descripcionas lorem i pmsusd lasjdlal fksjkdlo qoeoieoasldj
+                            {bodyLorem}
                         </p>
                         <a href="#" className="projectCardButton">See more</a>
                     </div>

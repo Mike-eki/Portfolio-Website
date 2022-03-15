@@ -26,9 +26,9 @@ function Contacts() {
                 <SvgMyPhone />
                 <SvgMyEmail />
                 <SvgMyLocation /> 
-                <span>+54 9 3418888999</span>
-                <span className="emailData">mi&#8203;que&#8203;as&#8203;.mo&#8203;re&#8203;no&#8203;2016@&#8203;gmail&#8203;.com</span>
-                <span> Argentina, Santa Fe</span>
+                <span className="phoneData">+54 9 3418888999</span>
+                <span className="emailData">miqueas&#8203;.moreno&#8203;2016&#8203;@gmail&#8203;.com</span>
+                <span className="locationData"> Argentina, Santa Fe</span>
             </div>
             <div className="personalData">
             </div>

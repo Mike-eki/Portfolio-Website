@@ -2,6 +2,7 @@ function SvgMyPhone () {
     return (
         <svg 
         xmlns="http://www.w3.org/2000/svg" 
+        className="infoSvgIcon one"
         height="34px" 
         viewBox="0 0 24 24" 
         width="34px" 
