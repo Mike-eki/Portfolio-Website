@@ -39,14 +39,14 @@ function Contacts() {
       <div className="contactSubContainer">
         <form className="myForm">
           <div className="inputGroup">
-            <input className="myName" type={"text"} required />
+            <input className="myName" type={"text"} required placeholder=" "/>
             <label className="contactLabel" htmlFor="myName">
               <SvgUser />
               Name
             </label>
           </div>
           <div className="inputGroup">
-            <input className="myEmail" type={"email"} required />
+            <input className="myEmail" type={"text"} required placeholder=" " />
             <label className="contactLabel" htmlFor="myEmail">
               <SvgEmail />
               Email
@@ -58,6 +58,7 @@ function Contacts() {
               type={"text"}
               rows={10}
               required
+              placeholder=" "
             ></textarea>
             <label className="contactLabel" htmlFor="myMessage">
               <SvgMessage /> Message

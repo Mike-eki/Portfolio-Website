@@ -6,10 +6,27 @@ import SvgHome from "../svgCode/NavIcons/SvgHome";
 import SvgProject from "../svgCode/NavIcons/SvgProject";
 import SvgServices from "../svgCode/NavIcons/SvgServices";
 
+
+/*=================================================== 
+  Cuando el usuario scrollea abajo, oculta el navbar.
+  Cuando el usuario scrollea arriba, muestra el navbar
+  ===================================================*/
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("mainNav").style.top = "0";
+  } else {
+    document.getElementById("mainNav").style.top = "-10vh";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
 class Navigation extends Component {
     render() {
         return (
-          <nav className="mainNav">
+          <nav className="mainNav" id="mainNav">
             
             <a href="#" className="logo">
               LOGO

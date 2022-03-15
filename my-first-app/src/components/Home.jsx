@@ -6,8 +6,8 @@ class Home extends Component {
             <section id="1" className="homeContainer">
 
                 <div className="homeVideoContainer">
-                    <video className="homeVideo" muted loop autoPlay>
-                    <source src="/video/sphere.mp4" type="video/mp4"/>
+                    <video className="homeVideo" muted loop autoPlay playsInline poster="/video/load-video-min">
+                    <source src="/video/Sphere-5.mp4" type="video/mp4"/>
                     </video>
                 </div>
 

@@ -9,7 +9,10 @@ import SvgContact from "../svgCode/NavIcons/SvgContact";
 const menuContainer = document.getElementsByClassName('menuContainer');
 const menuIcon = document.getElementsByClassName('menuIcon');
 
-// anEvent.target.closest('.menuContainer')
+//==================================================================
+// Esto hace le pone funcionalidad al icono del menu que se cierre
+// cuando el usuario clickie fuera como dentro del menu
+//==================================================================
 
 document.addEventListener('click', function(anEvent) {
   if ( anEvent.target.className === 'menuContainer' 
@@ -17,7 +20,6 @@ document.addEventListener('click', function(anEvent) {
     menuContainer[0].classList.add('active');
     menuIcon[0].classList.add('active');
   }
-  
   else if ( anEvent.target.className === 'menuContainer active' 
           || anEvent.target.className === 'menuIcon active' ) {
     menuContainer[0].classList.remove('active');
@@ -28,45 +30,10 @@ document.addEventListener('click', function(anEvent) {
     menuIcon[0].classList.remove('active');
   }
 })
+
+
 function MobileNav () {
   
-  // =================================
-  // Solve this please Mike... TwT
-  // =================================
-
-  // const [isActive, setIsActive] = useState(false);
-  // const [activation, setActivation] = useState(' active');
-  
-  // const setClassName = () => {
-  //   setIsActive(isActive => {
-  //     if (isActive) {
-  //       isActive = false;
-  //     }
-  //     else {
-  //       isActive = true;
-  //     }
-  //     console.log(isActive);
-  //   })
-    
-  //   settingActive();
-  // }
-  // function settingActive () {
-  //   setActivation(activation => {
-  //     if (isActive) {
-  //       activation = ' active';
-  //     }
-  //     else {
-  //       activation = '';
-  //     }
-  //     console.log(activation);
-  //   })
-  // }
-
-  // Esto de aqui funciona barbaro, pero solo falta que se cierre con un click en la cruz
-
-  
-  
-
     return (
       <nav className="navMobile">
             <ul className="allLinksMob">

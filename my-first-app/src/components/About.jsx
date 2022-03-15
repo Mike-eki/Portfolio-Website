@@ -11,9 +11,6 @@ function About () {
                 <div className='aboutText'>
                     <h2>About me</h2>
                     <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, ullam.
-                    </p>
-                    <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, assumenda facilis, saepe ad et sint fuga, accusamus perferendis expedita sit doloribus. Earum suscipit non rerum quos aliquam facere, doloremque autem cupiditate eius? Iure corporis, harum ad esse molestias est ipsum recusandae doloribus obcaecati blanditiis eveniet aperiam rem placeat voluptates voluptatem.
                     </p>
                     <p>
@@ -22,15 +19,12 @@ function About () {
                     <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci placeat odio aut a itaque eius culpa incidunt iste doloribus illo.
                     </p>
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ut delectus quibusdam asperiores saepe voluptatibus. Adipisci optio corrupti cum laudantium quae, laboriosam tenetur suscipit repellat ab ipsum rem? Voluptatem, est.
-                    </p>
                 </div>
             </article>
 
             <aside className="aboutAside">
                 <div className="aboutProfile">
-                    <img src={cardImg}></img>
+                    <img src='https://i.pinimg.com/564x/a7/80/1a/a7801a2a8469db649eb7ea41e7abd1d6.jpg'></img>
                 </div>
                 <div className="aboutAllLinks">
                     <div className='aboutRowLinks'>

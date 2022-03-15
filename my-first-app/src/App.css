@@ -63,9 +63,9 @@ body::-webkit-scrollbar {
     top: 0;
     width: 100%;
     height: 10vh;
+    transition: .3s;
     z-index: 10;
-    background: var(--neutralB);
-    box-shadow: 0 0 20px var(--neutralB);
+    background-color: var(--neutralB);
   }
   .logo {
     padding: 0 15px;
@@ -261,13 +261,11 @@ body::-webkit-scrollbar {
   mix-blend-mode: soft-light;
 }
 .homeVideo {
-  position: relative;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%,-50%);
+  width: 100vw;
+  height: 100vh;
 }
 .homeText {
   padding: 0 10px;
@@ -307,11 +305,26 @@ body::-webkit-scrollbar {
   align-items: center;
   background-color: var(--neutralW);;
 }
+.projectHeader {
+  width: 100%;
+}
 .projectTitle {
+  position: relative;
   font-family: var(--strongFont);
   font-size: clamp(2.8rem, 20vw, 4.5rem);
   color: var(--neutralB);
   margin: 10px 0 0 0;
+  text-align: center;
+}
+.projectTitle::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: var(--neutralB);
+  width: 95%; height: 3px;
+  top: 1.1em;
+  border-radius: 5em;
+  transform: translateX(2.5%);
 }
 .projectSubContainer {
   position: relative;
@@ -321,8 +334,7 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 .projectCard {
-  position: relative;
-  background-image: url("./img/project_img.jpg");
+  background-image: url("https://www.solofondos.com/wp-content/uploads/2016/03/outrun-vaporwave-hd-wallpaper-preview.jpg");
   background-size: cover;
   padding: 60px 0 0 0;
   margin: 0 5px 10px 5px;
@@ -330,6 +342,9 @@ body::-webkit-scrollbar {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 500ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .projectCard:hover,
 .projectCard:focus-within {
@@ -344,11 +359,12 @@ body::-webkit-scrollbar {
     rgba(0,0,0, .3),
     rgba(0,0,0, 1)
   );
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .projectCardTitle{
   position: relative;
-  width: max-content;
-  max-width: 100%;
   margin: 0 0 auto;
   color: var(--neutralW);
 }
@@ -434,11 +450,26 @@ body::-webkit-scrollbar {
   align-items: center;
   background-color: var(--primaryColor);
 }
+.servicesHeader {
+  width: 100%;
+}
 .servicesTitle {
+  position: relative;
   margin: 10px 0 0px 0;
   font-size: clamp(2.8rem, 20vw, 4.5rem);
   font-family: var(--strongFont);
   color: var(--neutralB);
+  text-align: center;
+}
+.servicesTitle::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: var(--neutralB);
+  width: 95%; height: 3px;
+  top: 1.1em;
+  border-radius: 5em;
+  transform: translateX(2.5%);
 }
 .servicesSubContainer {
   display: flex;
@@ -489,6 +520,7 @@ body::-webkit-scrollbar {
   width: inherit;
   padding: .5em 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 0 0 10px 10px;
@@ -571,16 +603,26 @@ body::-webkit-scrollbar {
 }
 .aboutText{
   inline-size: 75ch;
-  padding: 0 20px;
+  padding: 0 1.2em;
   background-color: var(--neutralW);
 }
 .aboutText h2 {
-  margin: 10px 0 0 0;
+  position: relative;
+  margin: .2em 0;
   font-size: clamp(2.8rem, 20vw, 4.5rem);
   font-family: var(--strongFont);
 }
+.aboutText h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: var(--neutralB);
+  width: 100%; height: 3px;
+  top: 1.1em;
+  border-radius: 5em;
+}
 .aboutText p {
-  margin: 0 0 10px;
+  margin: 0 0 1em;
   font-size: 1.1rem;
 }
 
@@ -647,10 +689,21 @@ body::-webkit-scrollbar {
   flex-direction: column;
 }
 .contactText h3{
+  position: relative;
   margin: 0;
   font-family: var(--strongFont);
   font-size: clamp(2.8rem, 20vw, 4.5rem);
   color: var(--neutralB);
+}
+.contactText h3::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background: var(--neutralB);
+  width: 95%; height: 3px;
+  top: 1.1em;
+  border-radius: 5em;
+  transform: translateX(2.5%);
 }
 .contactText p {
   color: var(--neutralB);
@@ -660,7 +713,7 @@ body::-webkit-scrollbar {
   display: flex;
 }
 .contactSvgIcon {
-  fill: var(--primaryLightColor);
+  fill: var(--primaryColor);
 }
 .infoSvgIcon {
   fill: var(--neutralB);
@@ -698,10 +751,18 @@ body::-webkit-scrollbar {
   outline: 0;
   border: 1.5px solid var(--primaryColor);
   border-radius: 10px;
-  color: var(--primaryLightColor);
+  color: var(--primaryColor);
   background:transparent;
   font-size: 12pt; 
   resize: none;
+  transition: .5s ease;
+}
+.myName:not(:placeholder-shown),
+.myEmail:not(:placeholder-shown),
+.myMessage:not(:placeholder-shown) {
+  color: var(--neutralB);
+  box-shadow: 0 0 25px var(--primaryColor);
+  background-color: var(--primaryColor);
 }
 .contactLabel {
   height: 100%;
@@ -709,7 +770,7 @@ body::-webkit-scrollbar {
   left: 0;
   top: 0;
   padding: 10px;
-  color: var(--primaryLightColor);
+  color: var(--primaryColor);
   cursor: text;
   z-index: -1;
   transition: 0.5s;
@@ -740,6 +801,9 @@ textarea:valid~label {
 @media (max-width: 900px) {
   .contactContainer {
     flex-direction: column;
+  }
+  .contactText h3 {
+    width: 100%;
   }
   .personalInfo {
     width: 100%;

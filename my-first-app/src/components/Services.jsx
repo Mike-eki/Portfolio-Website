@@ -3,7 +3,7 @@ import cardImg from "../img/image_card_ej.png";
 function Services () {
     return (
         <section id="3" className="servicesContainer">
-            <div>
+            <div className="servicesHeader">
                 <h2 className="servicesTitle">Services</h2>
             </div>
 
@@ -11,14 +11,13 @@ function Services () {
 
                 <article className="servicesCard">
                     <div className="servicesCardFrame">
-                        <img src={cardImg}></img>
+                        <img src='https://code.org/shared/images/courses/logo_tall_weblab.jpg'></img>
                     </div>
                     <div className="servicesCardText">
                         <h4>Web Development</h4>
                         <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut? Sed iure dolorem esse excepturi, reiciendis, aut et libero quis aliquid autem deserunt, numquam illo?
                         </p>
-                    </div>
                         <div className="servicesCardIcons">
                             <svg width="3em" height="3em">       
                                 <image href="https://www.svgrepo.com/show/349402/html5.svg" width="3em" height="3em"/>    
@@ -33,6 +32,7 @@ function Services () {
                                 <image href="https://www.svgrepo.com/show/354259/react.svg" width="3em" height="3em"/>    
                             </svg>
                         </div>
+                    </div>
                 </article>
 
                 <article className="servicesCard">
@@ -44,7 +44,6 @@ function Services () {
                         <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut? Sed iure dolorem esse excepturi, reiciendis, aut et libero quis aliquid autem deserunt, numquam illo?
                         </p>
-                    </div>
                         <div className="servicesCardIcons">
                             <svg width="3em" height="3em">       
                                 <image href="https://www.svgrepo.com/show/373968/photoshop.svg" src="yourfallback.png" width="3em" height="3em"/>    
@@ -56,18 +55,18 @@ function Services () {
                                 <image href="https://www.svgrepo.com/show/353488/blender.svg" src="yourfallback.png" width="3em" height="3em"/>    
                             </svg>
                         </div>
+                    </div>
                 </article>
 
                 <article className="servicesCard">
                     <div className="servicesCardFrame">
-                        <img src={cardImg}></img>
+                        <img src='https://www.elegantthemes.com/blog/wp-content/uploads/2019/12/blogging-jobs-featured-image.jpg'></img>
                     </div>
                     <div className="servicesCardText">
                         <h4>Content Creation</h4>
                         <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut? Sed iure dolorem esse excepturi, reiciendis, aut et libero quis aliquid autem deserunt, numquam illo?
                         </p>
-                    </div>
                         <div className="servicesCardIcons">
                             <svg width="3em" height="3em">       
                                 <image href="https://www.svgrepo.com/show/306484/notion.svg" src="yourfallback.png" width="3em" height="3em"/>    
@@ -79,6 +78,7 @@ function Services () {
                                 <image href="https://inceptum-stor.icons8.com/x7phzUUaJsT5/Hitfilm%20express%20icon.png" src="yourfallback.png" width="3em" height="3em"/>    
                             </svg>
                         </div>
+                    </div>
                         
                 </article>
 
