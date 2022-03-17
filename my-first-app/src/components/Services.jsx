@@ -14,10 +14,11 @@ function Services () {
                         <img src='https://code.org/shared/images/courses/logo_tall_weblab.jpg'></img>
                     </div>
                     <div className="servicesCardText">
-                        <h4>Web Development</h4>
-                        <p>
+                        <h4 className="servicesCardTitle">Web Development</h4>
+                        <p className="servicesCardBody">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut? Sed iure dolorem esse excepturi, reiciendis, aut et libero quis aliquid autem deserunt, numquam illo?
                         </p>
+                        <h5 className="servicesCardSubtitle">Tools I use:</h5>
                         <div className="servicesCardIcons">
                             <svg width="3em" height="3em">       
                                 <image href="https://www.svgrepo.com/show/349402/html5.svg" width="3em" height="3em"/>    
@@ -40,10 +41,11 @@ function Services () {
                         <img src={cardImg}></img>
                     </div>
                     <div className="servicesCardText">
-                        <h4>Digital Art</h4>
-                        <p>
+                        <h4 className="servicesCardTitle">Digital Art</h4>
+                        <p className="servicesCardBody">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut? Sed iure dolorem esse excepturi, reiciendis, aut et libero quis aliquid autem deserunt, numquam illo?
                         </p>
+                        <h5 className="servicesCardSubtitle">Tools I use:</h5>
                         <div className="servicesCardIcons">
                             <svg width="3em" height="3em">       
                                 <image href="https://www.svgrepo.com/show/373968/photoshop.svg" src="yourfallback.png" width="3em" height="3em"/>    
@@ -63,10 +65,11 @@ function Services () {
                         <img src='https://www.elegantthemes.com/blog/wp-content/uploads/2019/12/blogging-jobs-featured-image.jpg'></img>
                     </div>
                     <div className="servicesCardText">
-                        <h4>Content Creation</h4>
-                        <p>
+                        <h4 className="servicesCardTitle">Content Creation</h4>
+                        <p className="servicesCardBody">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut? Sed iure dolorem esse excepturi, reiciendis, aut et libero quis aliquid autem deserunt, numquam illo?
                         </p>
+                        <h5 className="servicesCardSubtitle">Tools I use:</h5>
                         <div className="servicesCardIcons">
                             <svg width="3em" height="3em">       
                                 <image href="https://www.svgrepo.com/show/306484/notion.svg" src="yourfallback.png" width="3em" height="3em"/>    

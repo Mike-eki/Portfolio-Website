@@ -26,22 +26,7 @@ function About () {
                 <div className="aboutProfile">
                     <img src='https://i.pinimg.com/564x/a7/80/1a/a7801a2a8469db649eb7ea41e7abd1d6.jpg'></img>
                 </div>
-                <div className="aboutAllLinks">
-                    <div className='aboutRowLinks'>
-                        <a href='#' className='aboutLink'>
-                    <SvgYoutube />
-                        </a>
-                        <a href='#' className='aboutLink'>
-                    <SvgInstagram />
-                        </a>
-                        <a href='#' className='aboutLink'>
-                    <SvgGithub />
-                        </a>
-                        <a href='#' className='aboutLink'>
-                    <SvgLinkedin />
-                        </a>
-                    </div>
-                </div>
+                
             </aside>
         </section>
     )

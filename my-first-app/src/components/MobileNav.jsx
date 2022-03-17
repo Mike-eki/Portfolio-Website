@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useEffect} from "react";
 
 import SvgHome from "../svgCode/NavIcons/SvgHome";
 import SvgProject from "../svgCode/NavIcons/SvgProject";
@@ -6,6 +6,8 @@ import SvgServices from "../svgCode/NavIcons/SvgServices";
 import SvgAbout from "../svgCode/NavIcons/SvgAbout";
 import SvgContact from "../svgCode/NavIcons/SvgContact";
 
+
+/*
 const menuContainer = document.getElementsByClassName('menuContainer');
 const menuIcon = document.getElementsByClassName('menuIcon');
 
@@ -13,7 +15,6 @@ const menuIcon = document.getElementsByClassName('menuIcon');
 // Esto hace le pone funcionalidad al icono del menu que se cierre
 // cuando el usuario clickie fuera como dentro del menu
 //==================================================================
-
 document.addEventListener('click', function(anEvent) {
   if ( anEvent.target.className === 'menuContainer' 
       || anEvent.target.className === 'menuIcon' ){
@@ -31,14 +32,43 @@ document.addEventListener('click', function(anEvent) {
   }
 })
 
+*/
+
 
 function MobileNav () {
   
+  const menuContainer = useRef();
+  const menuIcon = useRef();
+
+  useEffect( () => {
+    
+    window.addEventListener('click', (event) => {
+      if 
+      (event.target.className === 'menuContainer') 
+      {
+        menuContainer.current.classList.add('active');
+        menuIcon.current.classList.add('active');
+      }
+      else if 
+      (event.target.className === 'menuContainer active')
+      {
+        menuContainer.current.classList.remove('active');
+        menuIcon.current.classList.remove('active');
+      }
+      else 
+      {
+        menuContainer.current.classList.remove('active');
+        menuIcon.current.classList.remove('active');
+      }
+      // console.log(event.target);
+    });
+  }, []);
+
     return (
       <nav className="navMobile">
             <ul className="allLinksMob">
-              <div /*onClick={setClassName}*/ className={'menuContainer'/*+`${activation}`*/}> 
-                <div className="menuIcon"></div>
+              <div className='menuContainer' ref={menuContainer}> 
+                <div className="menuIcon" ref={menuIcon}></div>
               </div>
               <li className="itemMob">
                 <a href="#1" className="linkMob">

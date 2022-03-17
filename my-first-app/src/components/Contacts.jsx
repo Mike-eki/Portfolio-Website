@@ -1,9 +1,11 @@
 import SvgEmail from "../svgCode/SvgEmail";
 import SvgMessage from "../svgCode/SvgMessage";
-import SvgMyEmail from "../svgCode/SvgMyEmail";
-import SvgMyLocation from "../svgCode/SvgMyLocation"
-import SvgMyPhone from "../svgCode/SvgMyPhone";
 import SvgUser from "../svgCode/SvgUser";
+
+import SvgYoutube from "../svgCode/SvgYoutube";
+import SvgInstagram from "../svgCode/SvgInstagram";
+import SvgGithub from "../svgCode/SvgGithub";
+import SvgLinkedin from "../svgCode/SvgLinkedin";
 
 function Contacts() {
   return (
@@ -15,23 +17,39 @@ function Contacts() {
       <div className="contactSubContainer">
         <div className="personalInfo">
           <div className="contactText">
-              <h3>Contact me</h3>
+              <h3>Contact</h3>
               <p>
                 If there is one project that you want me to participate or a
                 service would you like to know more about it, let me know!
               </p>
           </div>
-          <div className="contactContent">
+          {/* <div className="contactContent">
             <div className="personalIcons">
                 <SvgMyPhone />
                 <SvgMyEmail />
                 <SvgMyLocation /> 
-                <span className="phoneData">+54 9 3418888999</span>
-                <span className="emailData">miqueas&#8203;.moreno&#8203;2016&#8203;@gmail&#8203;.com</span>
-                <span className="locationData"> Argentina, Santa Fe</span>
+                <span className="phoneData">PONE LOS ICONOS DE SOCIAL MEDIA AQUI</span>
+                <span className="emailData">PONERLE TOOLTIPS A ALGUNAS COSAS&#8203;.com</span>
+                <span className="locationData">QUITA ESTOS DATOS PERSONALES</span>
             </div>
             <div className="personalData">
             </div>
+          </div> */}
+          <div className="contactAllLinks">
+                    <div className='contactRowLinks'>
+                        <a href='#' className='contactLink'>
+                    <SvgYoutube />
+                        </a>
+                        <a href='#' className='contactLink'>
+                    <SvgInstagram />
+                        </a>
+                        <a href='#' className='contactLink'>
+                    <SvgGithub />
+                        </a>
+                        <a href='#' className='contactLink'>
+                    <SvgLinkedin />
+                        </a>
+                    </div>
           </div>
         </div>
       </div>
@@ -46,7 +64,7 @@ function Contacts() {
             </label>
           </div>
           <div className="inputGroup">
-            <input className="myEmail" type={"text"} required placeholder=" " />
+            <input className="myEmail" type={"email"} required placeholder=" " />
             <label className="contactLabel" htmlFor="myEmail">
               <SvgEmail />
               Email
