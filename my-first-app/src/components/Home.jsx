@@ -1,19 +1,18 @@
 import React, { useEffect, useRef, useMemo } from "react";
 
-
-
 function Home() {
 
-    
     //Pausar el video si la seccion 'Home' no aparece
     const homeVideo = useRef();
     const homeContainer = useRef();
+    const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const callbackFunction = entries => {
         const [entry] = entries;
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !noMotion) {
             homeVideo.current.play();
-        } else {
+        }
+         else {
             homeVideo.current.pause();
         }
     }
