@@ -263,6 +263,7 @@ body::-webkit-scrollbar {
   top: 0;
   left: 0;
   object-fit: cover;
+  pointer-events: none;
   width: 100vw;
   height: 100vh;
 }
@@ -817,12 +818,6 @@ textarea:valid~label {
   .personalIcons {
     grid-template-columns: repeat(1, 1fr);
   }
-  .phoneData {
-    grid-row: 2 / 3;
-  }
-  .emailData {
-    grid-row: 4 / 5;
-  }
   .contactText {
     align-items: center;
   }
@@ -838,7 +833,7 @@ textarea:valid~label {
   =============
 */
 .footerContainer { 
-  color: var(--primaryLightColor);
+  color: var(--primaryColor);
   text-align: center;
   background-color: var(--neutralB);
   min-height: 50vh;
@@ -861,16 +856,17 @@ textarea:valid~label {
   width: 70%;
 }
 .footerNavRow a {
-  padding: .5em;
-  border-radius: 10px;
+  padding: .8em;
+  border: 1px solid var(--primaryColor);
+  border-radius: 30px;
   text-decoration: none;
-  color: var(--primaryLightColor);
+  color: var(--primaryColor);
   transition: .5s;
 }
 .footerNavRow a:hover {
-  background-color: var(--primaryLightColor);
+  background-color: var(--primaryColor);
   color: var(--neutralB);
-  box-shadow: 0 0 8px var(--primaryLightColor);
+  box-shadow: 0 0 25px var(--primaryColor);
 }
 .footerSocialRow {
   display: flex;
@@ -880,7 +876,7 @@ textarea:valid~label {
   width: 50%;
 }
 .footerSocialIcon {
-  fill: aqua;
+  fill: var(--primaryColor);
   transition: .5s ease;
 }
 .footerSocialIcon:hover {
