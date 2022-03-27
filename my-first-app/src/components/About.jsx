@@ -1,13 +1,10 @@
-import cardImg from '../img/image_card_ej.png'
-import SvgInstagram from '../svgCode/SvgInstagram';
-import SvgYoutube from '../svgCode/SvgYoutube';
-import SvgGithub from '../svgCode/SvgGithub';
-import SvgLinkedin from '../svgCode/SvgLinkedin';
+
 
 function About () {
+
     return (
         <section id='4' className="aboutContainer">
-            <article className="aboutArticle">
+            <article className="aboutArticle animation">
                 <div className='aboutText'>
                     <h2>About me</h2>
                     <p>
@@ -23,7 +20,7 @@ function About () {
             </article>
 
             <aside className="aboutAside">
-                <div className="aboutProfile">
+                <div className="aboutProfile animation">
                     <img src='https://i.pinimg.com/564x/a7/80/1a/a7801a2a8469db649eb7ea41e7abd1d6.jpg'></img>
                 </div>
                 

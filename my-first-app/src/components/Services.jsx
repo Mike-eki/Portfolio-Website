@@ -1,6 +1,7 @@
 import cardImg from "../img/image_card_ej.png";
 
 function Services () {
+
     return (
         <section id="3" className="servicesContainer">
             <div className="servicesHeader">
@@ -9,7 +10,7 @@ function Services () {
 
             <div className="servicesSubContainer">
 
-                <article className="servicesCard">
+                <article className="servicesCard animation">
                     <div className="servicesCardFrame">
                         <img src='https://code.org/shared/images/courses/logo_tall_weblab.jpg'></img>
                     </div>
@@ -36,7 +37,7 @@ function Services () {
                     </div>
                 </article>
 
-                <article className="servicesCard">
+                <article className="servicesCard animation">
                     <div className="servicesCardFrame">
                         <img src={cardImg}></img>
                     </div>
@@ -60,7 +61,7 @@ function Services () {
                     </div>
                 </article>
 
-                <article className="servicesCard">
+                <article className="servicesCard animation">
                     <div className="servicesCardFrame">
                         <img src='https://www.elegantthemes.com/blog/wp-content/uploads/2019/12/blogging-jobs-featured-image.jpg'></img>
                     </div>

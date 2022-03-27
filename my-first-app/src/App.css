@@ -936,6 +936,17 @@ textarea:valid~label {
   ==================
 */
 
+.animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 500ms ease-in-out;
+}
+
+.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /*Some configuration for people who don't like animation at all*/
 @media (prefers-reduced-motion: reduce)
 {

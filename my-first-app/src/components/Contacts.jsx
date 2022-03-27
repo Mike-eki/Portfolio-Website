@@ -15,7 +15,7 @@ function Contacts() {
       </div>
 
       <div className="contactSubContainer">
-        <div className="personalInfo">
+        <div className="personalInfo animation">
           <div className="contactText">
               <h3>Contact</h3>
               <p>
@@ -23,18 +23,6 @@ function Contacts() {
                 service would you like to know more about it, let me know!
               </p>
           </div>
-          {/* <div className="contactContent">
-            <div className="personalIcons">
-                <SvgMyPhone />
-                <SvgMyEmail />
-                <SvgMyLocation /> 
-                <span className="phoneData">PONE LOS ICONOS DE SOCIAL MEDIA AQUI</span>
-                <span className="emailData">PONERLE TOOLTIPS A ALGUNAS COSAS&#8203;.com</span>
-                <span className="locationData">QUITA ESTOS DATOS PERSONALES</span>
-            </div>
-            <div className="personalData">
-            </div>
-          </div> */}
           <div className="contactAllLinks">
                     <div className='contactRowLinks'>
                         <a href='#' className='contactLink'>
@@ -55,7 +43,7 @@ function Contacts() {
       </div>
 
       <div className="contactSubContainer">
-        <form className="myForm">
+        <form className="myForm animation">
           <div className="inputGroup">
             <input className="myName" type={"text"} required placeholder=" "/>
             <label className="contactLabel" htmlFor="myName">

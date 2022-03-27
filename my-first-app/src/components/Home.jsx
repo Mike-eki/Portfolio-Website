@@ -1,43 +1,19 @@
-import React, { useEffect, useRef, useMemo } from "react";
+import React, { useRef } from "react";
+import VideoObserver from "../hooks/VideoObserver";
 
 function Home() {
 
-    //Pausar el video si la seccion 'Home' no aparece
     const homeVideo = useRef();
     const homeContainer = useRef();
-    const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    const callbackFunction = entries => {
-        const [entry] = entries;
-        if (entry.isIntersecting && !noMotion) {
-            homeVideo.current.play();
-        }
-         else {
-            homeVideo.current.pause();
-        }
-    }
-
-    const options = useMemo(() => {
-        return {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5,
-        }
-    }, []);
-
-    useEffect(() => {
-        // max-width: 765px
-        //const matchMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        const observeHome = new IntersectionObserver(callbackFunction, options);
-        const currentHome = homeContainer.current;
-        // const currentVideo = homeVideo.current;
-        if (currentHome) observeHome.observe(currentHome);
-
-        return () => {
-            if (currentHome) observeHome.unobserve(currentHome);
-        }
-    }, [homeContainer, options])
-
+    
+    //Custom Hook
+    //Pausar el video si la seccion 'Home' no aparece
+    VideoObserver({
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5,
+    }, homeVideo, homeContainer)
+    
         return (
             <section id="1" ref={homeContainer} className="homeContainer">
 

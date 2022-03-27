@@ -1,8 +1,9 @@
-import projectImg from "../img/project_img.jpg";
+import React from "react";
 
 const bodyLorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis! Minus, ducimus!'
 
 function Projects () {
+
     return (
         <section id="2" className="projectContainer">
             <div className="projectHeader">
@@ -11,7 +12,7 @@ function Projects () {
 
             <div className="projectSubContainer">
 
-                <div className="projectCard">
+                <div className="projectCard animation">
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta que puede ser de solo 2 renglones</h3>
                         <p className="projectCardBody">
@@ -22,7 +23,7 @@ function Projects () {
                 </div>
 
 
-                <div className="projectCard">
+                <div className="projectCard animation">
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -33,7 +34,7 @@ function Projects () {
                 </div>
         
 
-                <div className="projectCard">
+                <div className="projectCard animation">
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -44,7 +45,7 @@ function Projects () {
                 </div>
         
 
-                <div className="projectCard">
+                <div className="projectCard animation">
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -55,7 +56,7 @@ function Projects () {
                 </div>
         
 
-                <div className="projectCard">
+                <div className="projectCard animation">
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -66,7 +67,7 @@ function Projects () {
                 </div>
         
 
-                <div className="projectCard">
+                <div className="projectCard animation">
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -76,7 +77,7 @@ function Projects () {
                     </div>
                 </div>
 
-                <div className="projectCard">
+                <div className="projectCard animation">
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -86,7 +87,7 @@ function Projects () {
                     </div>
                 </div>
 
-                <div className="projectCard">
+                <div className="projectCard animation">
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
