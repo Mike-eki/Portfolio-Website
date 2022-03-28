@@ -60,7 +60,6 @@ function MobileNav () {
         menuContainer.current.classList.remove('active');
         menuIcon.current.classList.remove('active');
       }
-      // console.log(event.target);
     });
   }, []);
 
@@ -71,27 +70,27 @@ function MobileNav () {
                 <div className="menuIcon" ref={menuIcon}></div>
               </div>
               <li className="itemMob">
-                <a href="#1" className="linkMob">
+                <a href="#home" className="linkMob">
                   <SvgHome />
                 </a>
               </li>
               <li className="itemMob">
-                <a href="#2" className="linkMob">
+                <a href="#projects" className="linkMob">
                   <SvgProject />
                 </a>
               </li>
               <li className="itemMob">
-                <a href="#3" className="linkMob">
+                <a href="#services" className="linkMob">
                   <SvgServices />
                 </a>
               </li>
               <li className="itemMob">
-                <a href="#4" className="linkMob">
+                <a href="#about" className="linkMob">
                   <SvgAbout />
                 </a>
               </li>
               <li className="itemMob">
-                <a href="#5" className="linkMob">
+                <a href="#contact" className="linkMob">
                   <SvgContact />
                 </a>
               </li>

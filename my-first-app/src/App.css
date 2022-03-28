@@ -611,7 +611,6 @@ body::-webkit-scrollbar {
 .aboutText{
   inline-size: 75ch;
   padding: 0 1.2em;
-  background-color: var(--neutralW);
 }
 .aboutText h2 {
   position: relative;

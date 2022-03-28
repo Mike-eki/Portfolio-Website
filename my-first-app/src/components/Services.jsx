@@ -3,7 +3,7 @@ import cardImg from "../img/image_card_ej.png";
 function Services () {
 
     return (
-        <section id="3" className="servicesContainer">
+        <section id="services" className="servicesContainer">
             <div className="servicesHeader">
                 <h2 className="servicesTitle">Services</h2>
             </div>

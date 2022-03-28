@@ -9,7 +9,7 @@ import SvgLinkedin from "../svgCode/SvgLinkedin";
 
 function Contacts() {
   return (
-    <section id="5" className="contactContainer">
+    <section id="contact" className="contactContainer">
 
       <div className="contactImgContainer">
       </div>

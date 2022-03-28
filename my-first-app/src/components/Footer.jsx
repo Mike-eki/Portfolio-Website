@@ -8,19 +8,19 @@ function Footer () {
         <footer className="footerContainer">
             <div className="contentFooter">
                 <div className="footerNavRow">
-                    <a href="#">
+                    <a href="#home">
                         Home
                     </a>
-                    <a href="#">
+                    <a href="#projects">
                         Projects
                     </a>
-                    <a href="#">
+                    <a href="#services">
                         Services
                     </a>
-                    <a href="#">
+                    <a href="#about">
                         About
                     </a>
-                    <a href="#">
+                    <a href="#contact">
                         Contact
                     </a>
                 </div>

@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 
 import './App.css';
 
-import Navigation from './components/Navigation';
+import NormalNav from './components/NormalNav';
 import MobileNav from './components/MobileNav';
 import Home from './components/Home';
 import Services from './components/Services';
@@ -37,17 +37,16 @@ useEffect( () => {
 
   return (
     <div className="App">
-      <Navigation nameItem1="Home"
-                  nameItem2="Projects"
-                  nameItem3="Services"
-                  nameItem4="About me"
-                  nameItem5="Contact"/>
+
+      <NormalNav />
       <MobileNav />
+
       <Home />
       <Projects />
       <Services />
       <About />
       <Contacts />
+
       <Footer />
     </div>
   );

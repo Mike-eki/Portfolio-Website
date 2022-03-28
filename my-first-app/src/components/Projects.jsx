@@ -5,7 +5,7 @@ const bodyLorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
 function Projects () {
 
     return (
-        <section id="2" className="projectContainer">
+        <section id="projects" className="projectContainer">
             <div className="projectHeader">
                 <h2 className="projectTitle">Projects</h2>
             </div>

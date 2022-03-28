@@ -3,9 +3,9 @@
 function About () {
 
     return (
-        <section id='4' className="aboutContainer">
-            <article className="aboutArticle animation">
-                <div className='aboutText'>
+        <section id='about' className="aboutContainer">
+            <article className="aboutArticle">
+                <div className='aboutText animation'>
                     <h2>About me</h2>
                     <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, assumenda facilis, saepe ad et sint fuga, accusamus perferendis expedita sit doloribus. Earum suscipit non rerum quos aliquam facere, doloremque autem cupiditate eius? Iure corporis, harum ad esse molestias est ipsum recusandae doloribus obcaecati blanditiis eveniet aperiam rem placeat voluptates voluptatem.

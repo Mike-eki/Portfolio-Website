@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import SvgAbout from "../svgCode/NavIcons/SvgAbout";
 import SvgContact from "../svgCode/NavIcons/SvgContact";
@@ -23,8 +23,7 @@ window.onscroll = function() {
 }
 
 
-class Navigation extends Component {
-    render() {
+function NormalNav() {
         return (
           <nav className="mainNav" id="mainNav">
             
@@ -34,40 +33,39 @@ class Navigation extends Component {
 
             <ul className="allLinks">
               <li className="item">
-                <a href="#1" className="link">
+                <a href="#home" className="link">
                   <SvgHome />
-                  <span className="linkText">{this.props.nameItem1}</span>
+                  <span className="linkText">Home</span>
                 </a>
               </li>
               <li className="item">
-                <a href="#2" className="link">
+                <a href="#projects" className="link">
                   <SvgProject />
-                  <span className="linkText">{this.props.nameItem2}</span>
+                  <span className="linkText">Projects</span>
                 </a>
               </li>
               <li className="item">
-                <a href="#3" className="link">
+                <a href="#services" className="link">
                   <SvgServices />
-                  <span className="linkText">{this.props.nameItem3}</span>
+                  <span className="linkText">Services</span>
                 </a>
               </li>
               <li className="item">
-                <a href="#4" className="link">
+                <a href="#about" className="link">
                   <SvgAbout />
-                  <span className="linkText">{this.props.nameItem4}</span>
+                  <span className="linkText">About</span>
                 </a>
               </li>
               <li className="item">
-                <a href="#5" className="link">
+                <a href="#contact" className="link">
                   <SvgContact />
-                  <span className="linkText">{this.props.nameItem5}</span>
+                  <span className="linkText">Contact</span>
                 </a>
               </li>
             </ul>
 
           </nav>
         );
-    }
 }
 
-export default Navigation;
+export default NormalNav;

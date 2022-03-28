@@ -15,7 +15,7 @@ function Home() {
     }, homeVideo, homeContainer)
     
         return (
-            <section id="1" ref={homeContainer} className="homeContainer">
+            <section id="home" ref={homeContainer} className="homeContainer">
 
                 <div className="homeVideoContainer">
                     <video ref={homeVideo} className="homeVideo" muted loop autoPlay playsInline poster="./img/load-video-min.png">
