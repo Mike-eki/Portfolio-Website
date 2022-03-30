@@ -107,7 +107,7 @@ body::-webkit-scrollbar {
   .link:hover {
     color: var(--neutralB);
     background-color: var(--primaryColor);
-    box-shadow: 0 0 25px var(--primaryColor);
+    box-shadow: 0 0 5px var(--primaryColor);
   }
   .link:hover > .linkIcon {
     fill: var(--neutralB);
@@ -344,24 +344,30 @@ body::-webkit-scrollbar {
   transform: translateX(2.5%);
 }
 .projectSubContainer {
-  position: relative;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  gap: .5em;
+  margin: 0 0 2em 0;
 }
 .projectCard {
-  background-image: url("https://www.solofondos.com/wp-content/uploads/2016/03/outrun-vaporwave-hd-wallpaper-preview.jpg");
-  background-size: cover;
-  padding: 60px 0 0 0;
-  margin: 0 5px 10px 5px;
-  width: clamp(320px, 50%, 10rem);
+  padding: 160px 0 0 0;
+  margin: 0 .5em 1em;
+  width: clamp(420px, 50%, 10rem);
   border-radius: 10px;
   overflow: hidden;
   transition: transform 500ms ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+.projectCardImg {
+  z-index: -1;
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  object-fit: cover;
+  object-position: center;
 }
 .projectCard:hover,
 .projectCard:focus-within {
@@ -503,8 +509,8 @@ body::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   width: clamp(340px, 30%, 15rem);
-  box-shadow: 0 0 6px 2.5px var(--primaryLightColor);
-  transition: all 0.3s ease-in-out;
+  
+  transition: 0.2s ease-in-out;
 }
 .servicesCard::after {
   content: '';
@@ -512,18 +518,11 @@ body::-webkit-scrollbar {
   z-index: -1;
   border-radius: 10px;
   width: 100%; height: 100%;
-  opacity: 0;
-  outline: 3px solid var(--primaryLightColor);
-  box-shadow: 0 0 20px 6px var(--primaryLightColor),
-              0 8px 4px 2px var(--primaryDarkColor);
-  transition: all 0.3s ease-in-out;
-}
-.servicesCard:hover {
-  transform: translateY(-.5em);
-}
-.servicesCard:hover::after {
   opacity: 1;
+  box-shadow: 0 0 20px 6px var(--primaryLightColor);
+  transition: 0.2s ease-in-out;
 }
+
 .servicesCardFrame {
   width: 95%;
   height: 250px;
@@ -665,11 +664,11 @@ body::-webkit-scrollbar {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('/src/img/project_img.jpg');
+  /*background-image: url('/src/img/project_img.jpg');
   background-size: cover;
-  background-color: #22204e;
   background-blend-mode: soft-light;
-  opacity: 80%;
+  opacity: 80%;*/
+  background-color: #22204e;
   z-index: -2;
 }
 .contactSubContainer {
@@ -725,6 +724,7 @@ body::-webkit-scrollbar {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  gap: .3em;
 }
 .contactLink {
   position: relative;
@@ -768,7 +768,7 @@ body::-webkit-scrollbar {
   padding: 50px 0;
 }
 .inputGroup {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   position: relative;
 }
 .myName,
@@ -785,15 +785,17 @@ body::-webkit-scrollbar {
   resize: none;
   transition: .5s ease;
 }
-.myName:not(:placeholder-shown),
-.myEmail:not(:placeholder-shown),
-.myMessage:not(:placeholder-shown) {
+.myName:focus,
+.myEmail:focus,
+.myMessage:focus {
   color: var(--neutralB);
-  box-shadow: 0 0 25px var(--primaryColor);
+  box-shadow: 0 0 5px var(--primaryColor);
   background-color: var(--primaryColor);
 }
 .contactLabel {
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 0;
   top: 0;
@@ -804,6 +806,10 @@ body::-webkit-scrollbar {
   transition: 0.5s;
 }
 .contactButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
   padding: 10px 0;
   color: var(--primaryColor);
   background-color: transparent;
@@ -815,16 +821,26 @@ body::-webkit-scrollbar {
   transition: 1s;
 }
 .contactButton:hover{
-  box-shadow: 0 0 25px var(--primaryColor);
+  box-shadow: 0 0 5px var(--primaryColor);
   color:var(--neutralB);
   background-color: var(--primaryColor);
 }
+.send {
+  transition: 500ms ease-in-out;
+}
+.contactButton:hover > .send {
+  fill: var(--neutralB);
+}
 input:focus~label,
-input:valid~label,
+input:not(:placeholder-shown)~label,
 textarea:focus~label,
-textarea:valid~label {
+textarea:not(:placeholder-shown)~label {
   top: -35px;
   font-size: 10pt;
+}
+.warning{
+  color: red;
+  
 }
 @media (max-width: 900px) {
   .contactContainer {
@@ -892,7 +908,7 @@ textarea:valid~label {
 .footerNavRow a:hover {
   background-color: var(--primaryColor);
   color: var(--neutralB);
-  box-shadow: 0 0 25px var(--primaryColor);
+  box-shadow: 0 0 5px var(--primaryColor);
 }
 .footerSocialRow {
   display: flex;

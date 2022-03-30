@@ -1,6 +1,6 @@
 function SvgMessage () {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" 
+        <svg 
         className="contactSvgIcon"
         height="20px" 
         viewBox="0 0 24 24" 

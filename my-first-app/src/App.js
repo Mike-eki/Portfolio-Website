@@ -42,9 +42,9 @@ useEffect( () => {
       <MobileNav />
 
       <Home />
-      <Projects />
-      <Services />
       <About />
+      <Services />
+      <Projects />
       <Contacts />
 
       <Footer />

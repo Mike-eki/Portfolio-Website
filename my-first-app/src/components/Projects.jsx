@@ -13,6 +13,7 @@ function Projects () {
             <div className="projectSubContainer">
 
                 <div className="projectCard animation">
+                <img className="projectCardImg" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"></img>
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta que puede ser de solo 2 renglones</h3>
                         <p className="projectCardBody">
@@ -24,6 +25,7 @@ function Projects () {
 
 
                 <div className="projectCard animation">
+                <img className="projectCardImg" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"></img>    
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -35,6 +37,7 @@ function Projects () {
         
 
                 <div className="projectCard animation">
+                <img className="projectCardImg" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"></img>
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -46,6 +49,7 @@ function Projects () {
         
 
                 <div className="projectCard animation">
+                <img className="projectCardImg" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"></img>
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -57,6 +61,7 @@ function Projects () {
         
 
                 <div className="projectCard animation">
+                <img className="projectCardImg" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"></img>
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -68,6 +73,7 @@ function Projects () {
         
 
                 <div className="projectCard animation">
+                <img className="projectCardImg" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"></img>
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -78,6 +84,7 @@ function Projects () {
                 </div>
 
                 <div className="projectCard animation">
+                <img className="projectCardImg" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"></img>
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
@@ -88,6 +95,7 @@ function Projects () {
                 </div>
 
                 <div className="projectCard animation">
+                <img className="projectCardImg" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"></img>
                     <div className="projectCardText">
                         <h3 className="projectCardTitle">Titulo de carta</h3>
                         <p className="projectCardBody">
