@@ -1,5 +1,3 @@
-import cardImg from "../img/image_card_ej.png";
-
 function Services () {
 
     return (
@@ -17,7 +15,7 @@ function Services () {
                     <div className="servicesCardText">
                         <h4 className="servicesCardTitle">Web Development</h4>
                         <p className="servicesCardBody">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut? Sed iure dolorem esse excepturi, reiciendis, aut et libero quis aliquid autem deserunt, numquam illo?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas perspiciatis neque animi recusandae cum debitis sequi autem rem sit similique?
                         </p>
                         <h5 className="servicesCardSubtitle">Tools I use:</h5>
                         <div className="servicesCardIcons">
@@ -39,12 +37,12 @@ function Services () {
 
                 <article className="servicesCard animation">
                     <div className="servicesCardFrame">
-                        <img src={cardImg}></img>
+                        <img src="https://loish.net/wp-content/uploads/2015/09/wacom_01.png?x73825"></img>
                     </div>
                     <div className="servicesCardText">
                         <h4 className="servicesCardTitle">Digital Art</h4>
                         <p className="servicesCardBody">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut? Sed iure dolorem esse excepturi, reiciendis, aut et libero quis aliquid autem deserunt, numquam illo?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, facilis nostrum! Tempore consectetur amet, at rem, perspiciatis, odio deserunt eum recusandae temporibus fugit explicabo. Ipsa officia dolore commodi delectus illum.
                         </p>
                         <h5 className="servicesCardSubtitle">Tools I use:</h5>
                         <div className="servicesCardIcons">
@@ -68,7 +66,7 @@ function Services () {
                     <div className="servicesCardText">
                         <h4 className="servicesCardTitle">Content Creation</h4>
                         <p className="servicesCardBody">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut? Sed iure dolorem esse excepturi, reiciendis, aut et libero quis aliquid autem deserunt, numquam illo?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ducimus debitis velit officiis qui accusamus aut.
                         </p>
                         <h5 className="servicesCardSubtitle">Tools I use:</h5>
                         <div className="servicesCardIcons">

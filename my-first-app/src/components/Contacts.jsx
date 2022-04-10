@@ -52,15 +52,15 @@ function Contacts() {
       </div>
 
       <div className="contactSubContainer">
-        <div className="personalInfo animation">
+        <div className="personalInfo">
           <div className="contactText">
               <h3>Contact</h3>
-              <p>
+              <p className="animation">
                 If there is one project that you want me to participate or a
                 service would you like to know more about it, let me know!
               </p>
           </div>
-          <div className="contactAllLinks">
+          <div className="contactAllLinks animation">
                     <div className='contactRowLinks'>
                         <a href='#' className='contactLink'>
                     <SvgYoutube />

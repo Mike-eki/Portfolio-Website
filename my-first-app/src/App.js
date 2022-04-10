@@ -40,13 +40,11 @@ useEffect( () => {
 
       <NormalNav />
       <MobileNav />
-
       <Home />
-      <About />
-      <Services />
       <Projects />
+      <Services />
+      <About />
       <Contacts />
-
       <Footer />
     </div>
   );

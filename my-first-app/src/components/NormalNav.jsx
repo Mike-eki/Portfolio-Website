@@ -28,7 +28,7 @@ function NormalNav() {
           <nav className="mainNav" id="mainNav">
             
             <a href="#" className="logo">
-              LOGO
+              MM
             </a>
 
             <ul className="allLinks">
