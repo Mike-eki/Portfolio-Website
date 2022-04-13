@@ -48,20 +48,19 @@ function Contacts() {
   return (
     <section id="contact" className="contactContainer">
 
-      <div className="contactImgContainer">
-      </div>
+      <picture className="contactBackground"></picture>
 
-      <div className="contactSubContainer">
-        <div className="personalInfo">
-          <div className="contactText">
+      <main className="contactSubContainer">
+        <article className="personalInfo">
+          <header className="contactText">
               <h3>Contact</h3>
-          </div>
+          </header>
           <div className="contactAllLinks animation">
               <p className="contactBody animation">
                 If there is one project that you want me to participate or a
                 service would you like to know more about it, let me know!
               </p>
-                    <div className='contactRowLinks'>
+                    <nav className='contactRowLinks'>
                         <a href='#' className='contactLink'>
                     <SvgYoutube />
                         </a>
@@ -74,10 +73,10 @@ function Contacts() {
                         <a href='#' className='contactLink'>
                     <SvgLinkedin />
                         </a>
-                    </div>
+                    </nav>
           </div>
-        </div>
-      </div>
+        </article>
+      </main>
 
       <div className="contactSubContainer">
         <form onSubmit={handleSubmit} className="myForm animation">

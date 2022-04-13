@@ -1,122 +1,83 @@
-/*
-Componetizar
-*/
+import IconCentered from "../UIcomponents/IconCentered";
+import ServicesCard from "../UIcomponents/ServicesCard";
 
 function Services () {
 
     return (
         <section id="services" className="servicesContainer">
-            <div className="servicesHeader">
+            <header className="servicesHeader">
                 <h2 className="servicesTitle">Services</h2>
-            </div>
+            </header>
 
             <div className="servicesSubContainer">
 
-                <article className="servicesCard animation">
-                    <div className="servicesCardFrame">
-                        <img src='https://code.org/shared/images/courses/logo_tall_weblab.jpg'></img>
-                    </div>
-                    <div className="servicesCardText">
-                        <h4 className="servicesCardTitle">Web Development</h4>
-                        <p className="servicesCardBody">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas perspiciatis neque animi recusandae cum debitis sequi autem rem sit similique?
-                        </p>
-                        <h5 className="servicesCardSubtitle">Tools I use:</h5>
-                        <div className="servicesCardIcons">
-                            <div>
-                                <svg width="3em" height="3em">           
-                                    <image href="https://www.svgrepo.com/show/349402/html5.svg" width="3em" height="3em"/>
-                                </svg>
-                                <p className="servicesCardIconsName">HTML</p>
-                            </div>
-                            <div>
-                                <svg width="3em" height="3em">       
-                                    <image href="https://www.svgrepo.com/show/373535/css.svg" width="3em" height="3em"/>    
-                                </svg>
-                                <p className="servicesCardIconsName">CSS</p>
-                            </div>
-                            <div className="ToCenter">
-                                <svg width="3em" height="3em">       
-                                    <image href="https://www.svgrepo.com/show/349419/javascript.svg" width="3em" height="3em"/>    
-                                </svg>
-                                <p className="servicesCardIconsName">Javascript</p>
-                            </div>
-                            <div>
-                                <svg width="3em" height="3em">       
-                                    <image href="https://www.svgrepo.com/show/354259/react.svg" width="3em" height="3em"/>    
-                                </svg>
-                                <p className="servicesCardIconsName">React</p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ServicesCard
+                    imgSource={"https://code.org/shared/images/courses/logo_tall_weblab.jpg"}
+                    cardTitle={"Web Development"}
+                    cardBody={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates autem voluptatibus dolorum saepe. Alias voluptate, ex nulla nemo unde est libero assumenda itaque quas adipisci voluptates dolores, sapiente minima in."}
+                    cardSubtitle={"Tools I use:"}
+                >
+                    <IconCentered
+                        iconSource={"https://www.svgrepo.com/show/349402/html5.svg"}
+                        iconName={"HTML"}
+                    />
+                    <IconCentered
+                        iconSource={"https://www.svgrepo.com/show/373535/css.svg"}
+                        iconName={"CSS"}
+                    />
+                    <IconCentered
+                        iconSource={"https://www.svgrepo.com/show/349419/javascript.svg"}
+                        iconName={"Javascript"}
+                    />
+                    <IconCentered
+                        iconSource={"https://www.svgrepo.com/show/354259/react.svg"}
+                        iconName={"React"}
+                    />
+                </ServicesCard>
 
-                <article className="servicesCard animation">
-                    <div className="servicesCardFrame">
-                        <img src="https://loish.net/wp-content/uploads/2015/09/wacom_01.png?x73825"></img>
-                    </div>
-                    <div className="servicesCardText">
-                        <h4 className="servicesCardTitle">Digital Art</h4>
-                        <p className="servicesCardBody">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, facilis nostrum! Tempore consectetur amet, at rem, perspiciatis, odio deserunt eum recusandae temporibus fugit explicabo. Ipsa officia dolore commodi delectus illum.
-                        </p>
-                        <h5 className="servicesCardSubtitle">Tools I use:</h5>
-                        <div className="servicesCardIcons">
-                            <div className="ToCenter">
-                                <svg width="3em" height="3em">       
-                                    <image href="https://www.svgrepo.com/show/373968/photoshop.svg" src="yourfallback.png" width="3em" height="3em"/>    
-                                </svg>
-                                <p className="servicesCardIconsName">Photoshop</p>
-                            </div>
-                            <div>
-                                <svg width="3em" height="3em">       
-                                    <image href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/600px-Calligrakrita-base.svg.png?20220209122951" src="yourfallback.png" width="3em" height="3em"/>    
-                                </svg>
-                                <p className="servicesCardIconsName">Krita</p>
-                            </div>
-                            <div className="ToCenter">
-                                <svg width="3em" height="3em">       
-                                    <image href="https://www.svgrepo.com/show/353488/blender.svg" src="yourfallback.png" width="3em" height="3em"/>    
-                                </svg>
-                                <p className="servicesCardIconsName">Blender</p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                <ServicesCard
+                    imgSource={"https://loish.net/wp-content/uploads/2015/09/wacom_01.png?x73825"}
+                    cardTitle={"Digital art"}
+                    cardBody={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates autem voluptatibus dolorum saepe. Alias voluptate, ex nulla nemo unde est."}
+                    cardSubtitle={"Tools I use:"}
+                >
+                    <IconCentered
+                        iconSource={"https://www.svgrepo.com/show/373968/photoshop.svg"}
+                        iconName={"Photoshop"}
+                    />
+                    <IconCentered
+                        iconSource={"https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Calligrakrita-base.svg/600px-Calligrakrita-base.svg.png?20220209122951"}
+                        iconName={"Krita"}
+                    />
+                    <IconCentered
+                        iconSource={"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Inkscape_logo_%282-colour%29.svg/120px-Inkscape_logo_%282-colour%29.svg.png"}
+                        iconName={"Inkscape"}
+                    />
+                    <IconCentered
+                        iconSource={"https://www.svgrepo.com/show/353488/blender.svg"}
+                        iconName={"Blender"}
+                    />
+                </ServicesCard>
 
-                <article className="servicesCard animation">
-                    <div className="servicesCardFrame">
-                        <img src='https://www.elegantthemes.com/blog/wp-content/uploads/2019/12/blogging-jobs-featured-image.jpg'></img>
-                    </div>
-                    <div className="servicesCardText">
-                        <h4 className="servicesCardTitle">Content Creation</h4>
-                        <p className="servicesCardBody">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ducimus debitis velit officiis qui accusamus aut.
-                        </p>
-                        <h5 className="servicesCardSubtitle">Tools I use:</h5>
-                        <div className="servicesCardIcons">
-                            <div className="ToCenter">
-                                <svg width="3em" height="3em">       
-                                    <image href="https://www.svgrepo.com/show/306484/notion.svg" src="yourfallback.png" width="3em" height="3em"/>    
-                                </svg>
-                                <p className="servicesCardIconsName">Notion</p>
-                            </div>
-                            <div className="ToCenter">
-                                <svg width="3em" height="3em">       
-                                    <image href="https://www.clipartmax.com/png/full/33-330217_free-download-canva-arsenal-tube-station.png" src="yourfallback.png" width="3em" height="3em"/>    
-                                </svg>
-                                <p className="servicesCardIconsName">Canva</p>
-                            </div>
-                            <div className="ToCenter">
-                                <svg width="3em" height="3em">       
-                                    <image href="https://inceptum-stor.icons8.com/x7phzUUaJsT5/Hitfilm%20express%20icon.png" src="yourfallback.png" width="3em" height="3em"/>    
-                                </svg>
-                                <p className="servicesCardIconsName">Hitfilm</p>
-                            </div>
-                        </div>
-                    </div>
-                        
-                </article>
+                <ServicesCard
+                    imgSource={"https://www.elegantthemes.com/blog/wp-content/uploads/2019/12/blogging-jobs-featured-image.jpg"}
+                    cardTitle={"Content creation"}
+                    cardBody={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates autem voluptatibus dolorum saepe. Alias voluptate, ex nulla nemo unde est Lorem ipsum dolor sit amet."}
+                    cardSubtitle={"Tools I use:"}
+                >
+                    <IconCentered
+                        iconSource={"https://www.svgrepo.com/show/306484/notion.svg"}
+                        iconName={"Notion"}
+                    />
+                    <IconCentered
+                        iconSource={"https://www.clipartmax.com/png/full/33-330217_free-download-canva-arsenal-tube-station.png"}
+                        iconName={"Canva"}
+                    />
+                    <IconCentered
+                        iconSource={"https://inceptum-stor.icons8.com/x7phzUUaJsT5/Hitfilm%20express%20icon.png"}
+                        iconName={"Hitfilm"}
+                    />
+                </ServicesCard>
 
             </div>
         </section>

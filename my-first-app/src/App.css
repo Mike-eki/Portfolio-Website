@@ -283,7 +283,7 @@ body::-webkit-scrollbar {
   color: var(--neutralW);
   text-shadow: 1.5px 1.5px 3px var(--neutralB);
 }
-.homeDescription {
+.homeBody {
   margin: 0;
   font-size: clamp(1.2rem, 6vw, 1.8rem);
   font-family: var(--softFont);
@@ -294,7 +294,7 @@ body::-webkit-scrollbar {
   position: relative;
   text-decoration: none;
   padding: 0 1em 3em;
-  border: 3px solid var(--primaryLightColor);
+  border: 3px solid var(--primaryColor);
   border-radius: 30px;
   top: 1em;
 }
@@ -303,7 +303,7 @@ body::-webkit-scrollbar {
   position:absolute;
   margin: auto;
   width: 15px; height: 15px;
-  background-color: var(--primaryLightColor);
+  background-color: var(--primaryColor);
   left: 0; right: 0;
   border-radius: 50%;
   animation: move-down 2s infinite;
@@ -322,7 +322,7 @@ body::-webkit-scrollbar {
   position: absolute;
   display: block;
   width: max-content;
-  color: var(--primaryLightColor);
+  color: var(--primaryColor);
   text-align: center;
   font-size: 1.5em;
   right: -2.4em;
@@ -445,6 +445,17 @@ body::-webkit-scrollbar {
 .projectCardBody{
   color: var(--neutralW);
 }
+.projectCardIcons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3em;
+  margin: 0 0 .8em 0;
+}
+.projectCardNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+}
 /* The 'hover' is detecting the primary pointer divice (mouse/touchpad)*/
 @media(hover) {
   .projectCardText{
@@ -533,7 +544,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .servicesCard {
   position: relative;
@@ -554,7 +565,6 @@ body::-webkit-scrollbar {
   width: 100%; height: 100%;
   opacity: 1;
   box-shadow: 0 0 4px 2px var(--primaryLightColor);
-  transition: 0.2s ease-in-out;
 }
 .servicesCardFrame {
   width: 95%;
@@ -675,9 +685,23 @@ body::-webkit-scrollbar {
   padding: 1em;
   margin: 0 0 1em 0;
 }
+.aboutButtonResume::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 30px;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  opacity: 0;
+  box-shadow: 0 0 5px var(--primaryColor);
+  transition: opacity 500ms;
+}
 .aboutButtonResume:hover {
   background-color: var(--primaryColor);
   color: var(--neutralB);
+}
+.aboutButtonResume:hover::after {
+  opacity: 1;
 }
 /*For tablets and mobile diveces*/
 @media (max-width: 900px) {
@@ -706,7 +730,7 @@ body::-webkit-scrollbar {
   position: relative;
   display: flex;
 }
-.contactImgContainer {
+.contactBackground {
   position: absolute;
   width: 100%;
   height: 100%;

@@ -1,16 +1,18 @@
-export default function ProjectCard ({imgSource, titleCard, bodyCard, buttonCard}) {
+import IconCentered from "./IconCentered"
+
+export default function ProjectCard ({children ,imgSource, titleCard, bodyCard}) {
     return (
-        <div className="projectCard animation">
+        <picture className="projectCard animation">
                 <img className="projectCardImg" src={imgSource}></img>
-                <div className="projectCardText">
+                <article className="projectCardText">
                     <h3 className="projectCardTitle">
                         {titleCard}
                     </h3>
                     <p className="projectCardBody">
                         {bodyCard}
                     </p>
-                    <a href="#" className="projectCardButton">{buttonCard}</a>
-                </div>
-        </div>
+                    {children}
+                </article>
+        </picture>
     )
 }
