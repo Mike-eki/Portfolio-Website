@@ -15,8 +15,7 @@ function Services () {
                     imgSource={"https://code.org/shared/images/courses/logo_tall_weblab.jpg"}
                     cardTitle={"Web Development"}
                     cardBody={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates autem voluptatibus dolorum saepe. Alias voluptate, ex nulla nemo unde est libero assumenda itaque quas adipisci voluptates dolores, sapiente minima in."}
-                    cardSubtitle={"Tools I use:"}
-                >
+                    cardSubtitle={"Tools I use:"} >
                     <IconCentered
                         iconSource={"https://www.svgrepo.com/show/349402/html5.svg"}
                         iconName={"HTML"}
@@ -39,8 +38,7 @@ function Services () {
                     imgSource={"https://loish.net/wp-content/uploads/2015/09/wacom_01.png?x73825"}
                     cardTitle={"Digital art"}
                     cardBody={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates autem voluptatibus dolorum saepe. Alias voluptate, ex nulla nemo unde est."}
-                    cardSubtitle={"Tools I use:"}
-                >
+                    cardSubtitle={"Tools I use:"} >
                     <IconCentered
                         iconSource={"https://www.svgrepo.com/show/373968/photoshop.svg"}
                         iconName={"Photoshop"}
@@ -63,8 +61,7 @@ function Services () {
                     imgSource={"https://www.elegantthemes.com/blog/wp-content/uploads/2019/12/blogging-jobs-featured-image.jpg"}
                     cardTitle={"Content creation"}
                     cardBody={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates autem voluptatibus dolorum saepe. Alias voluptate, ex nulla nemo unde est Lorem ipsum dolor sit amet."}
-                    cardSubtitle={"Tools I use:"}
-                >
+                    cardSubtitle={"Tools I use:"} >
                     <IconCentered
                         iconSource={"https://www.svgrepo.com/show/306484/notion.svg"}
                         iconName={"Notion"}

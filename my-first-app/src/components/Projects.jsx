@@ -26,7 +26,7 @@ function Projects () {
                     </picture>
                     <nav className='projectCardNav'>
                         <a href="#" className="projectCardButton">
-                            See more
+                            {"</> "}Code
                         </a>
                         <a href="#" className="projectCardButton">
                             Live Demo

@@ -1,5 +1,3 @@
-import IconCentered from "./IconCentered"
-
 export default function ProjectCard ({children ,imgSource, titleCard, bodyCard}) {
     return (
         <picture className="projectCard animation">

@@ -79,22 +79,18 @@ body::-webkit-scrollbar {
     color: var(--primaryColor);
   }
   .allLinks {
-    padding: 0;
-    margin: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
-  }
-  .item {
-    padding: 0;
-    margin: 0;
+    gap: .7em;
+    padding: 0 1em;
   }
   .link {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .25em;
     padding: .6em;
-    margin: 0 .5em;
+    gap: .3em;
     text-decoration: none;
     border: 2px solid var(--primaryColor);
     font-size: 16px;
@@ -105,7 +101,7 @@ body::-webkit-scrollbar {
   }
   .linkIcon {
     fill: var(--primaryColor);
-    transition: .5s;
+    transition: fill .5s ease;
   }
   .link:hover {
     color: var(--neutralB);
@@ -116,6 +112,7 @@ body::-webkit-scrollbar {
     fill: var(--neutralB);
   }
 }
+
 /*For mobile width screens*/
 @media (max-width: 765px) {
   .mainNav {
@@ -328,22 +325,6 @@ body::-webkit-scrollbar {
   right: -2.4em;
   bottom: -1.5em;
 }
-/*For mobile divices*/
-/* @media (max-width: 765px) {
-  .homeVideo {
-    display: none;
-  }
-  .homeVideoContainer::after {
-    mix-blend-mode: none;
-    background-color: rgba(4, 161, 135, 0.5);
-    background-image: url('./img/load-video-min.png');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: soft-light;
-  }
-} */
-
-
 /*
   =================
   PROJECT
@@ -383,7 +364,7 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 .projectCard {
-  padding: 160px 0 0 0;
+  padding: 30px 0 0 0;
   margin: 0 .6em 1.2em;
   width: clamp(420px, 50%, 10rem);
   border-radius: 10px;
@@ -401,12 +382,6 @@ body::-webkit-scrollbar {
   object-fit: cover;
   object-position: center;
 }
-/* INCREASE SCALE WHEN TOUCH/HOVER
-.projectCard:hover,
-.projectCard:focus-within {
-  transform: scale(1.03);
-}
-*/
 .projectCardText{
   --padding: 0.8rem;
   padding: var(--padding); 
@@ -459,7 +434,7 @@ body::-webkit-scrollbar {
 /* The 'hover' is detecting the primary pointer divice (mouse/touchpad)*/
 @media(hover) {
   .projectCardText{
-    transform: translateY(65%);
+    transform: translateY(80%);
     transition: transform 500ms ease;
   }
   .projectCard:hover .projectCardText,
@@ -784,7 +759,6 @@ body::-webkit-scrollbar {
   display: flex;
 }
 .contactAllLinks {
-  display: block;
   padding: .7em;
 }
 .contactBody {
@@ -794,8 +768,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;
-  gap: .3em;
+  gap: 1em;
 }
 .contactLink {
   position: relative;
@@ -951,13 +924,11 @@ textarea:not(:placeholder-shown)~label {
   justify-content: center;
   align-items: center;
 }
-.contentFooter {
+.footerContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2em;
-  width: 90%;
-  padding: 2em;
+  padding: 2em 1em;
 }
 .footerNavRow {
   display: flex;
@@ -981,33 +952,17 @@ textarea:not(:placeholder-shown)~label {
 }
 .footerSocialRow {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 1em;
-  width: 50%;
 }
 .footerSocialIcon {
   fill: var(--primaryColor);
-  transition: .5s ease;
-}
-.footerSocialIcon:hover {
-  transform: scale(1.2);
+  transition: transform .5s ease;
 }
 
 /* For mobile diveces */
 @media (max-width: 765px) {
-  .contentFooter {
-    width: 100%;
-  }
-  .footerNavRow {
-    gap: 1.5em;
-    margin: 1.2em 0 0;
-    width: auto;
-    flex-direction: column;
-  }
-  .footerSocialRow {
-    flex-wrap: wrap;
-  }
   .footerText {
     text-align: center;
     padding: 0 3em 1em;

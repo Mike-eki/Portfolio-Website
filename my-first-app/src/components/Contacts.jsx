@@ -3,11 +3,8 @@ import {useState, useEffect} from "react";
 import SvgEmail from "../svgCode/SvgEmail";
 import SvgMessage from "../svgCode/SvgMessage";
 import SvgUser from "../svgCode/SvgUser";
-import SvgYoutube from "../svgCode/SvgYoutube";
-import SvgInstagram from "../svgCode/SvgInstagram";
-import SvgGithub from "../svgCode/SvgGithub";
-import SvgLinkedin from "../svgCode/SvgLinkedin";
 import SvgSend from "../svgCode/SvgSend";
+import SocialLinks from "../UIcomponents/SocialLinks";
 
 function Contacts() {
 
@@ -60,20 +57,12 @@ function Contacts() {
                 If there is one project that you want me to participate or a
                 service would you like to know more about it, let me know!
               </p>
-                    <nav className='contactRowLinks'>
-                        <a href='#' className='contactLink'>
-                    <SvgYoutube />
-                        </a>
-                        <a href='#' className='contactLink'>
-                    <SvgInstagram />
-                        </a>
-                        <a href='#' className='contactLink'>
-                    <SvgGithub />
-                        </a>
-                        <a href='#' className='contactLink'>
-                    <SvgLinkedin />
-                        </a>
-                    </nav>
+              <SocialLinks
+                youtubeClass={"contactSocialIcon"}
+                instagramClass={"contactSocialIcon"}
+                githubClass={"contactSocialIcon"}
+                linkedinClass={"contactSocialIcon"}
+              />
           </div>
         </article>
       </main>
