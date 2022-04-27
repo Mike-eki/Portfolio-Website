@@ -1,16 +1,17 @@
 import useObserver from './hooks/useObserver';
-import React, {useEffect} from 'react';
+import {useEffect, Suspense, lazy} from 'react';
 
 import './App.css';
 
 import NormalNav from './components/NormalNav';
 import MobileNav from './components/MobileNav';
 import Home from './components/Home';
-import Services from './components/Services';
-import Contacts from './components/Contacts';
-import Footer from './components/Footer';
-import About from './components/About';
 import Projects from './components/Projects';
+import Services from './components/Services';
+import About from './components/About';
+import Contacts from './components/Contacts';
+
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
 
@@ -45,7 +46,10 @@ useEffect( () => {
       <Services />
       <About />
       <Contacts />
-      <Footer />
+      <Suspense fallback={<div>Cargando...</div>}>
+        <Footer />
+      </Suspense>
+
     </div>
   );
 }

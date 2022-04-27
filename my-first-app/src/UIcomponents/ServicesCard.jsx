@@ -1,6 +1,6 @@
 export default function ServicesCard({children, imgSource, cardTitle, cardBody, cardSubtitle}) {
   return (
-    <article className="servicesCard animation">
+      <>
       <picture className="servicesCardFrame">
         <img src={imgSource}></img>
       </picture>
@@ -14,6 +14,6 @@ export default function ServicesCard({children, imgSource, cardTitle, cardBody, 
           {children}
         </footer>
       </article>
-    </article>
+      </>
   );
 }

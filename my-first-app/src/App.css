@@ -3,6 +3,7 @@
   --primaryLightColor: #8bf8f8;
   --primaryDarkColor: #04a187;
   --neutralB: #00241F;
+  --RGBneutralB: rgb(0, 36, 31, .8);
   --neutralW: #E6FFFC;
   --strongFont: 'Bebas Neue';
   --softFont: 'Montserrat';
@@ -53,7 +54,7 @@ body::-webkit-scrollbar {
   ===========================
 */
 
-/*For large width screens*/
+/*For LARGE width screens*/
 @media (min-width: 765px) {
   .navMobile {
     display: none;
@@ -68,12 +69,13 @@ body::-webkit-scrollbar {
     height: 12vh;
     transition: .3s;
     z-index: 10;
-    background-color: var(--neutralB);
+    background-color: var(--RGBneutralB);
+    backdrop-filter: blur(4px)
   }
   .logo {
     padding: 0 15px;
     font-family: var(--softFont);
-    font-size: 24px;
+    font-size: 32pt;
     font-weight: bold;
     text-decoration: none;
     color: var(--primaryColor);
@@ -87,6 +89,7 @@ body::-webkit-scrollbar {
   }
   .link {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     padding: .6em;
@@ -97,7 +100,23 @@ body::-webkit-scrollbar {
     border-radius: 30px;
     color: var(--primaryColor);
     overflow: hidden;
-    transition: .5s;
+    transition:
+      background-color 500ms,
+      color 500ms;
+  }
+  .item {
+    position: relative;
+  }
+  .item::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: 30px;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    opacity: 0;
+    box-shadow: 0 0px 7px var(--primaryColor);
+    transition: opacity 500ms;
   }
   .linkIcon {
     fill: var(--primaryColor);
@@ -106,7 +125,10 @@ body::-webkit-scrollbar {
   .link:hover {
     color: var(--neutralB);
     background-color: var(--primaryColor);
-    box-shadow: 0 0 5px var(--primaryColor);
+    /* box-shadow: 0 0 5px var(--primaryColor); */
+  }
+  .item:hover::after {
+    opacity: 1;
   }
   .link:hover > .linkIcon {
     fill: var(--neutralB);
@@ -120,7 +142,7 @@ body::-webkit-scrollbar {
   }
   .navMobile {
     position: fixed;
-    transform: translate(80vw,75vh);
+    transform: translate(80vw,80vh);
     z-index: 1000;
   }
   .allLinksMob {
@@ -266,6 +288,7 @@ body::-webkit-scrollbar {
   top: 0;
   left: 0;
   object-fit: cover;
+  object-position: left;
   pointer-events: none;
   width: 100vw;
   height: 100vh;
@@ -314,7 +337,7 @@ body::-webkit-scrollbar {
     opacity: 0
   }
 }
-.homeScrollDown::after {
+/* .homeScrollDown::after {
   content: 'Scroll Down';
   position: absolute;
   display: block;
@@ -324,7 +347,7 @@ body::-webkit-scrollbar {
   font-size: 1.5em;
   right: -2.4em;
   bottom: -1.5em;
-}
+} */
 /*
   =================
   PROJECT
@@ -620,7 +643,7 @@ body::-webkit-scrollbar {
   clip-path: circle(45%);
 }
 .aboutProfile img{
-  width: 100%;
+  width: 100%; height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -628,6 +651,7 @@ body::-webkit-scrollbar {
 .aboutText{
   inline-size: 75ch;
   padding: 0 1.2em;
+  margin: 0 0 2em 0;
 }
 .aboutText h2 {
   position: relative;
@@ -646,19 +670,20 @@ body::-webkit-scrollbar {
   border-radius: .03em;
 }
 .aboutText p {
-  margin: 0 0 1em;
+  margin: 0 0 2em;
   font-size: 1.1rem;
   color: var(--neutralW);
 }
 .aboutButtonResume {
+  position: relative;
   text-decoration: none;
   cursor: pointer;
-  background-color: transparent;
   border: 2px solid var(--primaryColor);
   border-radius: 30px;
   color: var(--primaryColor);
-  padding: 1em;
-  margin: 0 0 1em 0;
+  padding: .8em;
+  margin: 2em 0;
+  width: 20%;
 }
 .aboutButtonResume::after {
   content: '';
@@ -668,7 +693,7 @@ body::-webkit-scrollbar {
   width: 100%; height: 100%;
   top: 0; left: 0;
   opacity: 0;
-  box-shadow: 0 0 5px var(--primaryColor);
+  box-shadow: 0 0px 7px var(--primaryColor);
   transition: opacity 500ms;
 }
 .aboutButtonResume:hover {
@@ -885,7 +910,9 @@ textarea:not(:placeholder-shown)~label {
 }
 .warning{
   color: red;
-  
+}
+.success{
+  color: var(--primaryLightColor);
 }
 @media (max-width: 900px) {
   .contactContainer {

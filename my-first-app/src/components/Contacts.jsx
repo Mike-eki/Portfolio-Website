@@ -1,4 +1,5 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
+import emailjs from '@emailjs/browser';
 
 import SvgEmail from "../svgCode/SvgEmail";
 import SvgMessage from "../svgCode/SvgMessage";
@@ -8,10 +9,12 @@ import SocialLinks from "../UIcomponents/SocialLinks";
 
 function Contacts() {
 
+  const form = useRef();  
   const initialValues = { username: "", email: "", message: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const [success, setSuccess] = useState("")
 
   const handleChange = (event) => {
     const {name, value} = event.target;
@@ -24,23 +27,34 @@ function Contacts() {
     setIsSubmit(true);
   }
 
-  useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues); //Poner el popup o modal aca
-    }
-  }, [formErrors])
-
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (!values.username) errors.username = "Name is required!";
-    if (!values.email) errors.email = "Email is required!";
-    else if (!regex.test(values.email)) errors.email = "This is not a valid email format!"
-    if (!values.message) errors.message = "Message is required!";
+    if (!values.username) errors.username = "Name is required";
+    if (!values.email) errors.email = "Email is required";
+    else if (!regex.test(values.email)) errors.email = "This is not a valid email format"
+    if (!values.message) errors.message = "Message is required";
     else if(values.message.length < 10) errors.message = "The message must be more than 10 characters";
     return errors;
   }
+  
+  useEffect(() => {
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      setSuccess("Message sended succesfully!")
+
+      emailjs.sendForm('gmail', 'portfolio_template', form.current, 'QQRRLPEuZ5i_XYvIr')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      setFormValues(initialValues)
+      setTimeout(() => {
+        setSuccess("");
+      }, 5000)
+    }
+  }, [formErrors])
 
   return (
     <section id="contact" className="contactContainer">
@@ -54,8 +68,7 @@ function Contacts() {
           </header>
           <div className="contactAllLinks animation">
               <p className="contactBody animation">
-                If there is one project that you want me to participate or a
-                service would you like to know more about it, let me know!
+              ¡Trabajemos juntos para hacer cosas increibles!
               </p>
               <SocialLinks
                 youtubeClass={"contactSocialIcon"}
@@ -68,7 +81,7 @@ function Contacts() {
       </main>
 
       <div className="contactSubContainer">
-        <form onSubmit={handleSubmit} className="myForm animation">
+        <form onSubmit={handleSubmit} ref={form} className="myForm animation">
           <div className="inputGroup">
             <input onChange={handleChange} className="myName" name="username" type={"text"} placeholder=" " value={formValues.username}/>
             <label className="contactLabel" htmlFor="myName">
@@ -105,6 +118,7 @@ function Contacts() {
             <SvgSend />
             Send
           </button>
+          <p className="success">{success}</p>
         </form>
       </div>
     </section>

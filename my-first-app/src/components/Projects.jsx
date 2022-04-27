@@ -1,5 +1,7 @@
-import IconCentered from '../UIcomponents/IconCentered';
-import ProjectCard from '../UIcomponents/ProjectCard'
+import { lazy, Suspense } from 'react';
+
+const IconCentered = lazy(() => import("../UIcomponents/IconCentered"));
+const ProjectCard = lazy(() => import("../UIcomponents/ProjectCard"));
 
 function Projects () {
 
@@ -10,7 +12,8 @@ function Projects () {
             </header>
 
             <div className="projectSubContainer">
-
+            <picture className="projectCard animation">
+            <Suspense fallback={<>Loading...</>}>
                 <ProjectCard 
                     imgSource={"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"} 
                     titleCard={"Este es un titulo de la carta"} 
@@ -33,7 +36,10 @@ function Projects () {
                         </a>
                     </nav>
                 </ProjectCard>
-
+            </Suspense>
+            </picture>
+            <picture className="projectCard animation">
+            <Suspense fallback={<>Loading...</>}>
                 <ProjectCard
                     imgSource={"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"}
                     titleCard={"Este es otro titulo"}
@@ -50,7 +56,10 @@ function Projects () {
                         </a>
                     </nav>
                 </ProjectCard>
-                
+            </Suspense>
+            </picture>
+            <picture className="projectCard animation"> 
+            <Suspense fallback={<>Loading...</>}>  
                 <ProjectCard 
                     imgSource={"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"} 
                     titleCard={"Este es un titulo de la carta"} 
@@ -60,27 +69,8 @@ function Projects () {
                         See more
                 </a>
                 </ProjectCard>
-
-                <ProjectCard 
-                    imgSource={"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"} 
-                    titleCard={"Este es un titulo de la carta"} 
-                    bodyCard={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dignissimos reprehenderit facilis voluptatibus quod cum assumenda modi qui voluptates odio et quaerat sint dolor asperiores, natus iusto animi exercitationem officia."}  
-                > 
-                <a href="#" className="projectCardButton">
-                        See more
-                </a>
-                </ProjectCard>
-
-                <ProjectCard 
-                    imgSource={"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"} 
-                    titleCard={"Este es un titulo de la carta"} 
-                    bodyCard={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dignissimos reprehenderit facilis voluptatibus quod cum assumenda modi qui voluptates odio et quaerat sint dolor asperiores, natus iusto animi exercitationem officia."} 
-                > 
-                <a href="#" className="projectCardButton">
-                        See more
-                </a>
-                </ProjectCard>
-
+            </Suspense>
+            </picture>
             </div>
 
         </section>

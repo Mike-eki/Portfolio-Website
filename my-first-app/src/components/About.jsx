@@ -8,15 +8,15 @@ function About () {
                 <main className='aboutText'>
                     <h2>About me</h2>
                     <p className="animation">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corrupti quod nobis voluptates dolore, repellendus suscipit autem exercitationem velit dolorum nostrum qui quos quas harum quo. Illo, magnam. Quisquam voluptatibus modi illum cumque quae? Nam dolore veniam nemo vitae quidem deleniti cum quis error, earum ducimus placeat sequi commodi neque vel rem. Nobis vero iusto tenetur soluta dolores voluptate ipsum assumenda, sit beatae. Laboriosam ratione possimus ea modi quidem adipisci repellat placeat commodi repellendus nostrum, alias qui voluptates quae odit?
+                    ¡Hola! Soy Miqueas. Me dedico a constantemente aprender sobre tecnologia y arte. Estas dos areas me impulsan a desafiarme a mi mismo a crear soluciones que aun no han sido vistas todavia. Esta motivacion nacio en el momento en que juge por primera vez un videojuego, que es una fusion entre la programacion, arte visual y musica. Pico mi curiosidad el saber como estan hechos, el ver que muchas disciplinas estan involucradas en el proceso, me inspiro a nunca parar de aprender.
                     </p>
-                    <button className="aboutButtonResume animation">Resume CV</button>
+                    <a href="#" className="aboutButtonResume animation">Resume CV</a>
                 </main>
             </article>
 
             <aside className="aboutAside">
                 <picture className="aboutProfile animation">
-                    <img src='https://i.pinimg.com/564x/a7/80/1a/a7801a2a8469db649eb7ea41e7abd1d6.jpg'></img>
+                    <img src={require("../img/aboutPicture.jpg")}></img>
                 </picture>
             </aside>
         </section>

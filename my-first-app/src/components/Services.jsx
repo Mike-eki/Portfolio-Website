@@ -1,5 +1,7 @@
-import IconCentered from "../UIcomponents/IconCentered";
-import ServicesCard from "../UIcomponents/ServicesCard";
+import { lazy, Suspense } from "react";
+
+const IconCentered = lazy(() => import("../UIcomponents/IconCentered"));
+const ServicesCard = lazy(() => import("../UIcomponents/ServicesCard"));
 
 function Services () {
 
@@ -11,10 +13,13 @@ function Services () {
 
             <div className="servicesSubContainer">
 
+            <article className="servicesCard animation">
+                <Suspense fallback={<>Loading...</>}>
                 <ServicesCard
-                    imgSource={"https://code.org/shared/images/courses/logo_tall_weblab.jpg"}
-                    cardTitle={"Web Development"}
-                    cardBody={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates autem voluptatibus dolorum saepe. Alias voluptate, ex nulla nemo unde est libero assumenda itaque quas adipisci voluptates dolores, sapiente minima in."}
+                    imgSource={"https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif"}
+                    cardTitle={"Frontend Development"}
+                    cardBody={"What I do is place your idea inside on internet in order to being visible, easy to find, well structured and reaching everywhere in the world trough programming"}
+                    // "implement... instead of place into"
                     cardSubtitle={"Tools I use:"} >
                     <IconCentered
                         iconSource={"https://www.svgrepo.com/show/349402/html5.svg"}
@@ -33,11 +38,15 @@ function Services () {
                         iconName={"React"}
                     />
                 </ServicesCard>
+                </Suspense>
+            </article>
 
+            <article className="servicesCard animation">
+                <Suspense fallback={<>Loading...</>}>
                 <ServicesCard
-                    imgSource={"https://loish.net/wp-content/uploads/2015/09/wacom_01.png?x73825"}
-                    cardTitle={"Digital art"}
-                    cardBody={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates autem voluptatibus dolorum saepe. Alias voluptate, ex nulla nemo unde est."}
+                    imgSource={"https://media.giphy.com/media/4N7vzuuVabzWJnwUKx/giphy.gif"}
+                    cardTitle={"Digital Art"}
+                    cardBody={"I portray everything that's inside of your mind on a screen, written words to reality, with just a graphic tablet and software. The limit is your imagination"}
                     cardSubtitle={"Tools I use:"} >
                     <IconCentered
                         iconSource={"https://www.svgrepo.com/show/373968/photoshop.svg"}
@@ -56,11 +65,15 @@ function Services () {
                         iconName={"Blender"}
                     />
                 </ServicesCard>
+                </Suspense>
+            </article>
 
+            <article className="servicesCard animation">
+                <Suspense fallback={<>Loading...</>}>
                 <ServicesCard
-                    imgSource={"https://www.elegantthemes.com/blog/wp-content/uploads/2019/12/blogging-jobs-featured-image.jpg"}
-                    cardTitle={"Content creation"}
-                    cardBody={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates autem voluptatibus dolorum saepe. Alias voluptate, ex nulla nemo unde est Lorem ipsum dolor sit amet."}
+                    imgSource={"https://media.giphy.com/media/XyJPNKBskIDWR3Md8K/giphy.gif"}
+                    cardTitle={"Content Creation"}
+                    cardBody={"Sharing your 'thing' with your audience"}
                     cardSubtitle={"Tools I use:"} >
                     <IconCentered
                         iconSource={"https://www.svgrepo.com/show/306484/notion.svg"}
@@ -75,6 +88,8 @@ function Services () {
                         iconName={"Hitfilm"}
                     />
                 </ServicesCard>
+                </Suspense>
+            </article>
 
             </div>
         </section>
