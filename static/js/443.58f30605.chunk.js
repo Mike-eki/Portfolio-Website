@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_first_app=self.webpackChunkmy_first_app||[]).push([[443],{443:function(e,s,i){i.r(s),i.d(s,{default:function(){return n}});var r=i(184);function n(e){var s=e.iconSource,i=e.iconName;return(0,r.jsxs)("div",{className:"ToCenter",children:[(0,r.jsx)("svg",{width:"3em",height:"3em",children:(0,r.jsx)("image",{href:s,width:"3em",height:"3em"})}),(0,r.jsx)("p",{className:"servicesCardIconsName",children:i})]})}}}]);
+//# sourceMappingURL=443.58f30605.chunk.js.map
