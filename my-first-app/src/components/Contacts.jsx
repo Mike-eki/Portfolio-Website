@@ -14,7 +14,7 @@ function Contacts() {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const [success, setSuccess] = useState("")
+  const [success, setSuccess] = useState("Send")
 
   const handleChange = (event) => {
     const {name, value} = event.target;
@@ -22,7 +22,7 @@ function Contacts() {
   }
 
   const handleSubmit = (event) => {
-    event.preventDefault(); //Evita refrescar la pagina al hacer "Submit"
+    event.preventDefault(); //Avoid refresh the site when pressed "Submit"
     setFormErrors(validate(formValues));
     setIsSubmit(true);
   }
@@ -51,7 +51,7 @@ function Contacts() {
 
       setFormValues(initialValues)
       setTimeout(() => {
-        setSuccess("");
+        setSuccess("Send");
       }, 5000)
     }
   }, [formErrors])
@@ -68,7 +68,7 @@ function Contacts() {
           </header>
           <div className="contactAllLinks animation">
               <p className="contactBody animation">
-              ¡Trabajemos juntos para hacer cosas increibles!
+              Let's work together and make amazing things!
               </p>
               <SocialLinks
                 youtubeClass={"contactSocialIcon"}
@@ -116,9 +116,8 @@ function Contacts() {
           </div>
           <button type={"submit"} className="contactButton">
             <SvgSend />
-            Send
+            {success}
           </button>
-          <p className="success">{success}</p>
         </form>
       </div>
     </section>

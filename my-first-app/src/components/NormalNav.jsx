@@ -5,8 +5,8 @@ function NormalNav() {
 
 /*
   =================================================== 
-  Cuando el usuario scrollea abajo, oculta el navbar.
-  Cuando el usuario scrollea arriba, muestra el navbar
+  When a user scroll down, hide the navbar.
+  When a user scroll up, show the navbar.
   ===================================================
 */
   useEffect(() => {

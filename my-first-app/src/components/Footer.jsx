@@ -11,7 +11,7 @@ function Footer () {
                     linkedinClass={"footerSocialIcon"}
                 />
                 <strong className="footerText">
-                {'</>'} Pagina web creada por Miqueas Moreno {'</>'}
+                {'</>'} Website made by Miqueas Moreno {'</>'}
                 </strong>
             </article>
         </footer>

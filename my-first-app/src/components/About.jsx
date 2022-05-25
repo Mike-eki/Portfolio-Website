@@ -1,6 +1,6 @@
-
-
 function About () {
+    
+    const url = 'https://drive.google.com/file/d/1qxE6PH7-LVDg21PiWs8mgsi3CNBEUV9b/view?usp=sharing';
 
     return (
         <section id='about' className="aboutContainer">
@@ -8,9 +8,9 @@ function About () {
                 <main className='aboutText'>
                     <h2>About me</h2>
                     <p className="animation">
-                    ¡Hola! Soy Miqueas. Me dedico a constantemente aprender sobre tecnologia y arte. Estas dos areas me impulsan a desafiarme a mi mismo a crear soluciones que aun no han sido vistas todavia. Esta motivacion nacio en el momento en que juge por primera vez un videojuego, que es una fusion entre la programacion, arte visual y musica. Pico mi curiosidad el saber como estan hechos, el ver que muchas disciplinas estan involucradas en el proceso, me inspiro a nunca parar de aprender.
+                    I'm a college student at UTN, and I'm studying system engeeniring career, altough I'm also a digital artist, and content creator, who desire to inspire others finding solutions to the problems that we have in the present. I feel extremely fulfilled when I create something that is effective for the purpose it was made, so to do this I stay in tune with learning the lastest tech tools through challenging myself making my own projects which can contribute to make the life's people more easier.
                     </p>
-                    <a href="#" className="aboutButtonResume animation">Resume CV</a>
+                    <a target='_blank' href={url} className="aboutButtonResume animation">Resume CV</a>
                 </main>
             </article>
 

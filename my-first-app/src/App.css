@@ -43,7 +43,7 @@ body::-webkit-scrollbar {
 4. Services
 5. Contact
 6. Footer
-7. Animation config.
+7. Utils config.
 
 */
 
@@ -295,6 +295,7 @@ body::-webkit-scrollbar {
 }
 .homeText {
   padding: 0 10px;
+  max-width: 75ch;
 }
 .homeTitle {
   margin: 0;
@@ -358,7 +359,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--neutralB);;
+  background-color: var(--neutralB);
 }
 .projectHeader {
   width: 100%;
@@ -404,6 +405,8 @@ body::-webkit-scrollbar {
   top: 0; left: 0;
   object-fit: cover;
   object-position: center;
+  opacity: .7;
+  transition: opacity 500ms;
 }
 .projectCardText{
   --padding: 0.8rem;
@@ -456,6 +459,10 @@ body::-webkit-scrollbar {
 }
 /* The 'hover' is detecting the primary pointer divice (mouse/touchpad)*/
 @media(hover) {
+  .projectCard:hover > .projectCardImg {
+    opacity: .3;
+  }
+
   .projectCardText{
     transform: translateY(80%);
     transition: transform 500ms ease;
@@ -489,21 +496,17 @@ body::-webkit-scrollbar {
   border: 2px solid var(--primaryColor);
   padding: 0.7em 1em;
   border-radius: 30px;
+  transition:
+    color 500ms,
+    background-color 500ms,
+    box-shadow 500ms,
 }
 .projectCardButton:hover,
 .projectCardButton:focus {
   background-color: var(--primaryColor);
   color: black;
-  box-shadow: 0 0 15px var(--primaryColor);
+  box-shadow: 0 0 7px var(--primaryColor);
 }
-/* Responsiveness */
-/*
-@media (max-width: 500px) {
-  .projectCard {
-    width: 95%;
-  }
-}
-*/
 /*-----------------------------------------------------*/
 
 /*
@@ -652,6 +655,7 @@ body::-webkit-scrollbar {
   inline-size: 75ch;
   padding: 0 1.2em;
   margin: 0 0 2em 0;
+  line-height: 1.4;
 }
 .aboutText h2 {
   position: relative;
@@ -704,7 +708,7 @@ body::-webkit-scrollbar {
   opacity: 1;
 }
 /*For tablets and mobile diveces*/
-@media (max-width: 900px) {
+@media (max-width: 585px) {
   .aboutContainer {
     flex-direction: column-reverse;
   }
@@ -834,11 +838,10 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   width: 90%;
-  padding: 50px 0;
-  gap: .3em;
+  padding: 35px;
+  gap: 1em;
 }
 .inputGroup {
-  margin-bottom: 10px;
   position: relative;
 }
 .myName,
@@ -910,10 +913,9 @@ textarea:not(:placeholder-shown)~label {
 }
 .warning{
   color: red;
+  margin: .7em 0 .7em 0;
 }
-.success{
-  color: var(--primaryLightColor);
-}
+
 @media (max-width: 900px) {
   .contactContainer {
     flex-direction: column;
@@ -998,7 +1000,7 @@ textarea:not(:placeholder-shown)~label {
 
 /*
   ==================
-  ANIMATION CONFIG
+  UTILS CONFIG
   ==================
 */
 
@@ -1011,6 +1013,11 @@ textarea:not(:placeholder-shown)~label {
 .show {
   transform: translateY(0);
   opacity: 1;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: .3;
 }
 
 /*Some configuration for people who don't like animation at all*/

@@ -17,10 +17,9 @@ function Services () {
                 <Suspense fallback={<>Loading...</>}>
                 <ServicesCard
                     imgSource={"https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif"}
-                    cardTitle={"Frontend Development"}
-                    cardBody={"What I do is place your idea inside on internet in order to being visible, easy to find, well structured and reaching everywhere in the world trough programming"}
-                    // "implement... instead of place into"
-                    cardSubtitle={"Tools I use:"} >
+                    cardTitle={"Web Development"}
+                    cardBody={"What I do is stand out your idea on internet in order to being visible, user-friendly, well structured, and reach everywhere in the world trough programming"}
+                    cardSubtitle={"Tools:"} >
                     <IconCentered
                         iconSource={"https://www.svgrepo.com/show/349402/html5.svg"}
                         iconName={"HTML"}
@@ -46,8 +45,8 @@ function Services () {
                 <ServicesCard
                     imgSource={"https://media.giphy.com/media/4N7vzuuVabzWJnwUKx/giphy.gif"}
                     cardTitle={"Digital Art"}
-                    cardBody={"I portray everything that's inside of your mind on a screen, written words to reality, with just a graphic tablet and software. The limit is your imagination"}
-                    cardSubtitle={"Tools I use:"} >
+                    cardBody={"By means of this field, I make things that don't exist yet to become a reality on a screen, with a graphic tablet, and digital art software, so the limit is your imagination"}
+                    cardSubtitle={"Tools:"} >
                     <IconCentered
                         iconSource={"https://www.svgrepo.com/show/373968/photoshop.svg"}
                         iconName={"Photoshop"}
@@ -73,8 +72,8 @@ function Services () {
                 <ServicesCard
                     imgSource={"https://media.giphy.com/media/XyJPNKBskIDWR3Md8K/giphy.gif"}
                     cardTitle={"Content Creation"}
-                    cardBody={"Sharing your 'thing' with your audience"}
-                    cardSubtitle={"Tools I use:"} >
+                    cardBody={"Behind a good brand, there are some process in the background like ideation, planning, creating and sharing engaging content, and that's when I come in"}
+                    cardSubtitle={"Tools:"} >
                     <IconCentered
                         iconSource={"https://www.svgrepo.com/show/306484/notion.svg"}
                         iconName={"Notion"}
